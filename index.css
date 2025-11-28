@@ -16,19 +16,27 @@ h1 {
 }
 
 .menu {
-    margin-top: 40px;
     display: flex;
-    flex-direction: column; /* Ahora los elementos van uno debajo del otro */
-    align-items: center;    /* Centra horizontalmente los elementos */
-    gap: 30px;              /* Espacio entre cada bloque */
+    flex-direction: column; /* Cada fila debajo de la otra */
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1000px; /* Limita ancho total */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center; /* Centra verticalmente el link y la imagen */
+    gap: 30px;           /* Espacio entre el link y la imagen */
+    flex-wrap: wrap;      /* Para que en móvil se acomode en columna */
+    justify-content: center;
 }
 
 .card {
-    display: block;         /* Que el enlace ocupe todo el ancho definido */
+    display: block;
     background: rgba(255, 100, 200, 0.15);
     border: 2px solid #ff4abb;
-    padding: 20px;
-    width: 300px;           /* Tamaño adecuado */
+    padding: 25px;
+    width: 250px;
     border-radius: 12px;
     font-size: 1.2rem;
     text-decoration: none;
@@ -43,9 +51,9 @@ h1 {
     box-shadow: 0 0 15px #ff5ace;
 }
 
-.menu img {
-    width: 300px;           /* Misma anchura que los enlaces */
-    height: auto;           /* Mantiene proporción */
+.menu-item img {
+    width: 400px; /* Imagen más grande */
+    height: auto;
     border-radius: 12px;
 }
 
