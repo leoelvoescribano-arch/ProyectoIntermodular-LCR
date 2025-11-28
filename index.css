@@ -18,20 +18,22 @@ h1 {
 .menu {
     margin-top: 40px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
+    flex-direction: column; /* Ahora los elementos van uno debajo del otro */
+    align-items: center;    /* Centra horizontalmente los elementos */
+    gap: 30px;              /* Espacio entre cada bloque */
 }
 
 .card {
+    display: block;         /* Que el enlace ocupe todo el ancho definido */
     background: rgba(255, 100, 200, 0.15);
     border: 2px solid #ff4abb;
-    padding: 25px;
-    width: 260px;
+    padding: 20px;
+    width: 300px;           /* Tamaño adecuado */
     border-radius: 12px;
     font-size: 1.2rem;
     text-decoration: none;
     color: #ffc9f4;
+    text-align: center;
     transition: 0.3s;
 }
 
@@ -39,4 +41,16 @@ h1 {
     background: rgba(255, 100, 200, 0.30);
     transform: scale(1.05);
     box-shadow: 0 0 15px #ff5ace;
+}
+
+.menu img {
+    width: 300px;           /* Misma anchura que los enlaces */
+    height: auto;           /* Mantiene proporción */
+    border-radius: 12px;
+}
+
+p {
+    margin-top: 50px;
+    color: #ffc9f4;
+    font-size: 14px;
 }
