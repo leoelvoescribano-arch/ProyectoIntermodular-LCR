@@ -1,0 +1,34 @@
+body {
+    background: #2b0020;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    color: #ffceed;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ff94e6;
+    text-decoration: none;
+}
+
+h1 {
+    color: #ff47dc;
+    text-shadow: 0 0 12px #ff47dc;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 80, 200, 0.08);
+    border: 1px solid #ff6dd3;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 14px;
+}
