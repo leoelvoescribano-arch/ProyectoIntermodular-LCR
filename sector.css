@@ -5,17 +5,10 @@ body {
     color: #ffd0f5;
 }
 
+/* HEADER */
 header {
     padding: 20px;
     text-align: center;
-}
-
-.back {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    color: #ff77e9;
-    text-decoration: none;
 }
 
 h1 {
@@ -23,12 +16,92 @@ h1 {
     text-shadow: 0 0 10px #ff2fcf;
 }
 
+/* VOLVER */
+.back {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #ff77e9;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ÍNDICE */
+.indice {
+    max-width: 900px;
+    margin: 30px auto;
+    background: rgba(255, 0, 150, 0.15);
+    border: 1px solid #ff2fcf;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.indice h2 {
+    color: #ff77e9;
+    margin-bottom: 10px;
+}
+
+.indice ul {
+    list-style: none;
+    padding: 0;
+}
+
+.indice li {
+    margin: 8px 0;
+}
+
+.indice a {
+    color: #ffd0f5;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.indice a:hover {
+    color: #ff2fcf;
+    text-shadow: 0 0 8px #ff2fcf;
+}
+
+/* TARJETAS DE CONTENIDO */
 .content {
     max-width: 900px;
     margin: auto;
+}
+
+.card {
     background: rgba(255, 0, 150, 0.12);
     border: 1px solid #ff2fcf;
     padding: 25px;
-    margin-top: 40px;
     border-radius: 12px;
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease both;
+}
+
+.card:hover {
+    background: rgba(255, 0, 150, 0.22);
+    transform: translateY(-3px);
+    transition: 0.2s ease-in-out;
+}
+
+/* ICONOS */
+.card i {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* TITULOS */
+h2 {
+    color: #ff77e9;
+    text-shadow: 0 0 8px #ff2fcf;
+}
+
+h3 {
+    color: #ffa6f5;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
