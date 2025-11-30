@@ -48,3 +48,14 @@ ul {
 ul li {
     margin-bottom: 8px;
 }
+
+/* IMÁGENES DE CADA CRITERIO */
+.criterio-img {
+    width: 100%;
+    max-width: 850px;
+    display: block;
+    margin: 15px auto 30px auto;
+    border-radius: 12px;
+    border: 1px solid #ff2fcf;
+    box-shadow: 0 0 10px #ff2fcf;
+}
