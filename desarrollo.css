@@ -174,3 +174,48 @@ hr {
     transform: scale(1.02);
     box-shadow: 0 0 35px rgba(255, 57, 186, 0.8);
 }
+.seccion-vm {
+    max-width: 900px;
+    margin: 60px auto;          
+    padding: 20px;
+}
+
+
+.seccion-vm h2 {
+    text-align: center;
+    color: #ff5fcf;
+    font-size: 2.4rem;
+    margin: 80px 0 50px 0;
+    text-shadow: 0 0 12px #ff39ba;
+}
+
+
+.titulo-izquierda {
+    text-align: left;
+    color: #ff99d4;
+    font-size: 1.9rem;
+    margin: 90px 0 30px 0;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+
+.texto-centrado {
+    max-width: 850px;
+    margin: 0 auto 50px auto;    
+    text-align: left;            
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+
+code {
+    background: rgba(255, 57, 186, 0.2);
+    padding: 2px 8px;
+    border-radius: 6px;
+    color: #ffcced;
+}
