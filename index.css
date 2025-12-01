@@ -17,17 +17,17 @@ h1 {
 
 .menu {
     display: flex;
-    flex-direction: column; /* Cada fila debajo de la otra */
+    flex-direction: column; 
     gap: 30px;
     margin: 40px auto;
-    max-width: 1000px; /* Limita ancho total */
+    max-width: 1000px; 
 }
 
 .menu-item {
     display: flex;
-    align-items: center; /* Centra verticalmente el link y la imagen */
-    gap: 30px;           /* Espacio entre el link y la imagen */
-    flex-wrap: wrap;      /* Para que en móvil se acomode en columna */
+    align-items: center; 
+    gap: 30px;          
+    flex-wrap: wrap;     
     justify-content: center;
 }
 
@@ -52,7 +52,7 @@ h1 {
 }
 
 .menu-item img {
-    width: 400px; /* Imagen más grande */
+    width: 400px; 
     height: auto;
     border-radius: 12px;
 }
@@ -61,4 +61,22 @@ p {
     margin-top: 50px;
     color: #ffc9f4;
     font-size: 14px;
+}
+.nav-link {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 12px 20px;
+    background: rgba(0, 200, 255, 0.12);   
+    border: 2px solid #00e7ff;             
+    border-radius: 10px;
+    color: #b7f9ff;                        
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background: rgba(0, 200, 255, 0.30);
+    box-shadow: 0 0 12px #00eaff;
+    transform: scale(1.08);
 }
