@@ -1,116 +1,186 @@
-body {
-    background: #220014;
+/* ===========================
+   RESET BÁSICO
+=========================== */
+* {
     margin: 0;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: #ffd3f5;
-    padding: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
+body {
+    background: #f4f6f9;
+    color: #222;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* ===========================
+   ENCABEZADO Y NAVEGACIÓN
+=========================== */
 header {
+    background: #1e2a38;
     padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    color: #fff;
+    margin-bottom: 10px;
     text-align: center;
 }
 
-.back {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #ff5fcf;
-    text-decoration: none;
-    font-size: 20px;
+nav {
+    text-align: center;
+    margin-top: 10px;
 }
 
-h1 {
-    color: #ff39ba;
-    text-shadow: 0 0 14px #ff39ba;
-}
-
-.content {
-    max-width: 900px;
-    margin: auto;
-    background: rgba(255,10,140,0.15);
-    border: 2px solid #ff39ba;
-    padding: 25px;
-    margin-top: 40px;
-    border-radius: 15px;
-}
-
-/* NAV */
-.nav-link {
+nav a {
     display: inline-block;
-    margin: 10px 15px;
-    padding: 12px 20px;
-    background: rgba(0, 200, 255, 0.12);
-    border: 2px solid #00e7ff;
-    border-radius: 10px;
-    color: #b7f9ff;
-    font-size: 1.1rem;
+    padding: 10px 16px;
+    color: #dfe7ef;
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.25s ease-in-out;
 }
 
-.nav-link:hover {
-    background: rgba(0, 200, 255, 0.30);
-    box-shadow: 0 0 12px #00eaff;
-    transform: scale(1.08);
+nav a:hover {
+    background: #4b89dc;
+    color: #fff;
+    transform: translateY(-2px);
 }
 
-.question {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 2px solid #ff39ba;
+/* ===========================
+   CONTENEDORES GENERALES
+=========================== */
+main, .container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
     border-radius: 12px;
-    background: rgba(255, 10, 140, 0.10);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   TITULOS
+=========================== */
+h2, h3, h4 {
+    margin-bottom: 15px;
+    color: #1e2a38;
+}
+
+/* ===========================
+   FORMULARIOS
+=========================== */
+
+form p {
+    margin-bottom: 20px;
 }
 
 label {
-    font-size: 16px;
-}
-
-.correct {
-    color: #7CFF7C;
     font-weight: bold;
 }
 
-.incorrect {
-    color: #FF6B6B;
-    font-weight: bold;
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #c9d2de;
+    border-radius: 8px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    transition: 0.25s;
 }
 
-.btn-enviar {
-    margin-top: 20px;
-    background: #ff39ba;
-    border: none;
-    padding: 12px 25px;
+input:focus, select:focus {
+    border-color: #4b89dc;
+    outline: none;
+    box-shadow: 0 0 6px rgba(75,137,220,0.4);
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+button, input[type="submit"] {
+    background: #4b89dc;
     color: white;
-    font-size: 18px;
-    border-radius: 10px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 0 10px #ff39ba;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.25s ease-in-out;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #356ec4;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   PREGUNTAS DEL CUESTIONARIO
+=========================== */
+
+.question {
+    padding: 15px;
+    border: 2px solid #dfe7ef;
+    border-radius: 10px;
+    margin-bottom: 20px;
     transition: 0.3s;
 }
 
-.btn-enviar:hover {
-    background: #ff63ca;
-    box-shadow: 0 0 15px #ff63ca;
-    transform: scale(1.05);
+.question:hover {
+    border-color: #4b89dc;
+    background: #f1f6ff;
 }
 
-.registration {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 25px;
-    background: rgba(255,10,140,0.15);
-    border: 2px solid #ff39ba;
-    border-radius: 12px;
+.question label {
+    font-weight: normal;
 }
 
-.input-field {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+.question input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* ===========================
+   ESTADOS DE RESPUESTAS
+=========================== */
+.correct {
+    background-color: #d1f2d1 !important;
+    border-color: #4CAF50 !important;
+}
+
+.incorrect {
+    background-color: #f8d0d0 !important;
+    border-color: #e54343 !important;
+}
+
+/* ===========================
+   CAJAS DE INFORMACIÓN
+=========================== */
+.info-box {
+    background: #e9f1ff;
+    border-left: 6px solid #4b89dc;
+    padding: 12px 16px;
+    margin-bottom: 18px;
     border-radius: 8px;
-    border: 1px solid #ff39ba;
-    background: rgba(255,10,140,0.05);
-    color: #ffd3f5;
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   PIE DE PAGINA
+=========================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
 }
