@@ -2,34 +2,233 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Desarrollo del Software</title>
-    <link rel="stylesheet" href="desarrollo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos de Software e Ingeniería del Software</title>
 </head>
 <body>
 
-<a class="back" href="index.html">← Volver</a>
+<h1>Conceptos de Software e Ingeniería del Software</h1>
 
-<header>
-    <h1>Desarrollo del Software</h1>
-</header>
 
-<div class="content">
-    <p>¿Qué es el software?</p>
-    <p>
-        El software es el conjunto de programas, aplicaciones y datos que permiten a un 
-        ordenador o dispositivo electrónico realizar tareas específicas. Representa la parte 
-        lógica del sistema, es decir, las instrucciones que indican al hardware cómo debe 
-        funcionar.
-    </p>
+<hr>
 
-    <p>
-        Se divide principalmente en tres categorías: 
-        <strong>software de sistema</strong> (como los sistemas operativos), 
-        <strong>software de aplicación</strong> (como navegadores, editores de texto o juegos), 
-        y <strong>software de programación</strong> (herramientas usadas por desarrolladores 
-        para crear nuevos programas).
-    </p>
-</div>
+<h2>1. ¿Qué es el Software?</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Computer_icon.svg" alt="Software" width="200">
+<p>El software se define como el conjunto de instrucciones, programas, procedimientos y datos que permiten que un dispositivo electrónico, como una computadora, un teléfono o un sistema embebido, realice tareas específicas. El software no es tangible: no se puede tocar, pero es indispensable para que el hardware funcione.</p>
+<p>El software actúa como intermediario entre el usuario y el hardware. Gracias a él, el usuario puede comunicarse con la máquina mediante interfaces gráficas, programas de propósito específico o sistemas complejos.</p>
+
+<h3>Categorías del Software</h3>
+<ul>
+    <li><strong>Software de sistema:</strong> Controla y gestiona el hardware. Ejemplos: Windows, Linux, Android.</li>
+    <li><strong>Software de aplicación:</strong> Programas para realizar tareas específicas como editar documentos, navegar por internet o jugar.</li>
+    <li><strong>Software de programación:</strong> Herramientas para crear software, como editores, compiladores y entornos de desarrollo.</li>
+</ul>
+
+<hr>
+
+<h2>2. ¿Cómo Funciona el Software?</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/CPU_with_arrows.svg" alt="Funcionamiento del software" width="280">
+<p>El software funciona como un conjunto de instrucciones secuenciales que el procesador interpreta y ejecuta. Este proceso implica una serie de pasos:</p>
+<ol>
+    <li>El usuario realiza una acción (clic, comando, interacción).</li>
+    <li>El software traduce la acción en instrucciones.</li>
+    <li>La CPU recibe instrucciones codificadas.</li>
+    <li>La máquina ejecuta la operación.</li>
+    <li>El resultado vuelve al usuario en forma visual o auditiva.</li>
+</ol>
+<p>Este ciclo ocurre millones de veces por segundo, permitiendo el funcionamiento fluido de programas complejos.</p>
+
+<hr>
+
+<h2>3. Máquinas Virtuales</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Virtualbox_logo.png" alt="Virtualización" width="200">
+<p>Una máquina virtual (VM) es un entorno que simula un sistema informático completo. Permite ejecutar sistemas operativos completos o procesos aislados sin afectar la máquina física.</p>
+
+<h3>Máquinas Virtuales de Sistema</h3>
+<p>Simulan hardware completo. Se usan para pruebas, compatibilidad, servidores o aislar sistemas.</p>
+<ul>
+    <li>VMware</li>
+    <li>VirtualBox</li>
+    <li>Hyper-V</li>
+</ul>
+
+<h3>Máquinas Virtuales de Proceso</h3>
+<p>Ejecutan procesos o aplicaciones específicos de forma independiente. Ejemplo fundamental: la Java Virtual Machine (JVM).</p>
+
+<hr>
+
+<h2>4. Proceso para Ejecutar un Programa en Java</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Java_Logo.svg" width="150" alt="Java">
+<p>Java utiliza un proceso en dos fases:</p>
+<ol>
+    <li>El programador escribe código fuente en <code>.java</code>.</li>
+    <li>El compilador <code>javac</code> lo transforma en bytecode (<code>.class</code>).</li>
+    <li>La JVM interpreta el bytecode y ejecuta el programa en cualquier máquina.</li>
+</ol>
+<p>Este mecanismo permite la famosa frase: <em>“Write once, run anywhere”.</em></p>
+
+<hr>
+
+<h2>5. Clasificación de Lenguajes</h2>
+<p>Los lenguajes se clasifican según su nivel de abstracción del hardware.</p>
+
+<h3>Lenguajes de Bajo Nivel</h3>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/8086_arch.svg" width="260" alt="Assembly">
+<p>Ejemplos: lenguaje máquina, ensamblador. Son rápidos y eficientes, pero difíciles de programar.</p>
+
+<h3>Lenguajes de Alto Nivel</h3>
+<p>Más fáciles de comprender. Ejemplos:</p>
+<ul>
+    <li>Python</li>
+    <li>Java</li>
+    <li>C#</li>
+    <li>JavaScript</li>
+</ul>
+
+<hr>
+
+<h2>6. Elementos de un Lenguaje de Programación</h2>
+<p>Incluyen:</p>
+<ul>
+    <li>Identificadores</li>
+    <li>Constantes</li>
+    <li>Variables</li>
+    <li>Instrucciones</li>
+    <li>Comentarios</li>
+</ul>
+
+<hr>
+
+<h2>7. Conceptos de Código</h2>
+<h3>Código Fuente</h3>
+<p>Texto escrito por el programador.</p>
+<h3>Código Objeto</h3>
+<p>Versión intermedia generada por el compilador.</p>
+<h3>Código Ejecutable</h3>
+<p>Archivo final que el sistema operativo puede ejecutar.</p>
+
+<hr>
+
+<h2>8. Fundamentos del Funcionamiento del Ordenador</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Computer_architecture.svg" width="300" alt="Arquitectura básica">
+<p>El hardware sigue el ciclo:</p>
+<ol>
+    <li>Buscar instrucción</li>
+    <li>Decodificar</li>
+    <li>Ejecutar</li>
+</ol>
+<p>Incluye CPU, memoria, buses y sistemas de entrada/salida.</p>
+
+<hr>
+
+<h2>9. Tipos de Software</h2>
+<p>Incluye:</p>
+<ul>
+    <li>Software de Sistema</li>
+    <li>Middleware</li>
+    <li>Software de Aplicación</li>
+</ul>
+
+<hr>
+
+<h2>10. Ciclo de Vida del Software</h2>
+<p>Conjunto de etapas que sigue un producto software desde su concepción hasta su retiro.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Waterfall_model.svg" width="300" alt="Cascada">
+<h3>Modelo en Cascada</h3>
+<ul>
+    <li>Análisis</li>
+    <li>Diseño</li>
+    <li>Implementación</li>
+    <li>Pruebas</li>
+    <li>Mantenimiento</li>
+</ul>
+<h3>Modelos Ágiles, Incrementales y Evolutivos</h3>
+<p>Más flexibles, basados en iteraciones.</p>
+
+<hr>
+
+<h2>11. Roles en el Desarrollo de Software</h2>
+<ul>
+    <li>Analista</li>
+    <li>Arquitecto</li>
+    <li>Programador</li>
+    <li>Tester</li>
+    <li>Product Owner</li>
+</ul>
+
+<hr>
+
+<h2>12. Paradigmas de Programación</h2>
+<h3>Programación Estructurada</h3>
+<p>Basada en secuencias, condicionales y bucles.</p>
+<h3>Programación Orientada a Objetos</h3>
+<p>Utiliza clases y objetos, encapsulación, herencia y polimorfismo.</p>
+
+<hr>
+
+<h2>13. Obtención de Código Ejecutable</h2>
+<p>Incluye compilación, enlazado y carga en memoria.</p>
+
+<hr>
+
+<h2>14. Metodologías Ágiles</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Scrum_process.svg" width="260" alt="Scrum">
+<p>Promueven entregas rápidas, colaboración y adaptación al cambio.</p>
+
+<hr>
+
+<h2>15. Proceso Unificado (RUP)</h2>
+<p>Modelo iterativo basado en:</p>
+<ul>
+    <li>Inicio</li>
+    <li>Elaboración</li>
+    <li>Construcción</li>
+    <li>Transición</li>
+</ul>
+
+<hr>
+
+<h2>16. Importancia del Software en la Sociedad Actual</h2>
+<p>Permite automatizar industrias, gestionar información y habilitar tecnologías como IA, big data y robótica.</p>
+
+<hr>
+
+<h2>17. Ingeniería del Software</h2>
+<p>Disciplina que aplica principios científicos y técnicos al desarrollo de software.</p>
+
+<hr>
+
+<h2>18. Arquitectura del Software</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Client-server-model.svg" width="280" alt="Arquitectura Cliente Servidor">
+<p>Incluye patrones como capas, microservicios, cliente-servidor y orientado a eventos.</p>
+
+<hr>
+
+<h2>19. Pruebas de Software</h2>
+<p>Proceso que garantiza funcionamiento correcto y calidad.</p>
+<ul>
+    <li>Unitarias</li>
+    <li>Integración</li>
+    <li>Sistema</li>
+    <li>Aceptación</li>
+    <li>Rendimiento</li>
+</ul>
+
+<hr>
+
+<h2>20. Seguridad del Software</h2>
+<p>Protege datos e infraestructura contra ataques.</p>
+<ul>
+    <li>Cifrado</li>
+    <li>Control de accesos</li>
+    <li>Pruebas de penetración</li>
+    <li>Actualizaciones constantes</li>
+</ul>
+
+<hr>
+
+<h2>21. Documentación del Software</h2>
+<p>Incluye manuales, APIs, requisitos y diagramas.</p>
 
 </body>
 </html>
