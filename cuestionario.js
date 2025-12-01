@@ -10,7 +10,7 @@ const correctQuiz1 = [
     1  // q7
 ];
 
-// --- RESPUESTAS CORRECTAS (segundo cuestionario: ciclo de vida + RUP/Ágil) ---
+// --- RESPUESTAS CORRECTAS (segundo cuestionario: ciclo de vida) ---
 const correctNewQuiz = {
     q_new0: "B",
     q_new1: "B",
@@ -52,10 +52,9 @@ document.getElementById("quiz-form").addEventListener("submit", function(e) {
         }
     }
 
-    // NOTA SOBRE 10
-    let nota = ((aciertos / total) * 10).toFixed(2);
+    let nota = Math.round((aciertos / total) * 100);
 
-    alert(`Tu nota del primer test es: ${nota} / 10`);
+    alert(`Tu calificación del primer test es: ${nota}%`);
     mostrarResultados("Primer cuestionario", nota, resultado);
 });
 
@@ -81,15 +80,14 @@ document.getElementById("quiz-new-form").addEventListener("submit", function(e) 
         }
     });
 
-    // NOTA SOBRE 10
-    let nota = ((aciertos / keys.length) * 10).toFixed(2);
+    let nota = Math.round((aciertos / keys.length) * 100);
 
-    alert(`Tu nota del segundo test es: ${nota} / 10`);
+    alert(`Tu calificación del segundo test es: ${nota}%`);
     mostrarResultados("Segundo cuestionario", nota, resultado);
 });
 
 
-// --- FUNCIÓN PARA MOSTRAR RESULTADOS BONITOS ---
+// --- FUNCIÓN GENERAL PARA MOSTRAR RESULTADOS BONITOS ---
 function mostrarResultados(titulo, nota, texto) {
     let ventana = window.open("", "_blank");
     ventana.document.write(`
@@ -110,7 +108,7 @@ function mostrarResultados(titulo, nota, texto) {
         </head>
         <body>
             <h1>${titulo}</h1>
-            <h2>Nota: ${nota} / 10</h2>
+            <h2>Calificación: ${nota}%</h2>
             ${texto}
         </body>
         </html>
