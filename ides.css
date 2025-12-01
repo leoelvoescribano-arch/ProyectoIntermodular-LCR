@@ -201,6 +201,21 @@ h1 {
     box-shadow: 0 0 12px #00eaff;
     transform: scale(1.08);
 }
+button {
+    padding: 8px 15px;
+    background: #7d3cff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 
 
 
