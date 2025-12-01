@@ -112,4 +112,10 @@ h1 {
     box-shadow: 0 0 12px #00eaff;
     transform: scale(1.08);
 }
+.menu-ides {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
 
