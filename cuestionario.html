@@ -2,253 +2,171 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Cuestionario sobre Software y Hardware</title>
+<title>Cuestionario Completo</title>
 <link rel="stylesheet" href="desarrollo.css">
 </head>
 <body>
 
-<a class="back" href="index.html">← Volver</a>
-
 <header>
-<h1>Cuestionario sobre Software y Hardware</h1>
-<br>
-   <nav>
-    <a href="desarrolo.html" class="nav-link">Desarrollo</a>
-    <a href="ides.html" class="nav-link">IDES</a>
-    <a href="sector.html" class="nav-link">Sector Productivo</a>
-    <a href="index.html" class="nav-link">Inicio</a>
-  </nav>
-</br>
+    <h1>Cuestionario Completo</h1>
 </header>
 
 <div id="quiz">
 
-    <!-- FORMULARIO DE REGISTRO -->
-    <div class="registration">
-        <h2>Registro</h2>
-        <form id="registration-form">
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name" class="input-field" required><br><br>
+<form id="quiz-all">
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" class="input-field" required><br><br>
+    <h2>Test completo de Desarrollo de Software</h2>
 
-            <label for="birthdate">Fecha de nacimiento:</label><br>
-            <input type="date" id="birthdate" name="birthdate" class="input-field" required><br><br>
+    <!-- ======================= -->
+    <!--   PRIMER CUESTIONARIO   -->
+    <!-- ======================= -->
 
-            <button type="submit" class="btn-enviar">Registrarse</button>
-        </form>
+    <h3>Primer Cuestionario (8 preguntas)</h3>
+
+    <div class="question">
+        <p><strong>1. ¿Qué es un requisito funcional?</strong></p>
+        <label><input type="radio" name="q0" value="1"> Describe qué debe hacer el sistema</label><br>
+        <label><input type="radio" name="q0" value="0"> Describe características no medibles</label><br>
     </div>
 
-    <hr>
-
-    <!-- CUESTIONARIO EXISTENTE: Software y Hardware -->
-    <form id="quiz-form">
-        <h2>Test: Software y Hardware</h2>
-
-        <!-- Pregunta 1 -->
-        <div class="question">
-        <p><strong>1. ¿Cuál es el objetivo principal del proceso software?</strong></p>
-        <label><input type='radio' name='q0' value='0'> Construir software rápidamente</label><br>
-        <label><input type='radio' name='q0' value='1'> Regular y organizar las tareas del desarrollo para obtener software de calidad</label><br>
-        <label><input type='radio' name='q0' value='2'> Eliminar la documentación</label><br>
-        <label><input type='radio' name='q0' value='3'> Aumentar el coste del desarrollo</label><br>
-        </div>
-
-        <!-- Pregunta 2 -->
-        <div class="question">
-        <p><strong>2. ¿Qué problema NO formaba parte de la crisis del software?</strong></p>
-        <label><input type='radio' name='q1' value='0'> Costes imprecisos</label><br>
-        <label><input type='radio' name='q1' value='1'> Mala productividad</label><br>
-        <label><input type='radio' name='q1' value='2'> Software de excelente calidad</label><br>
-        <label><input type='radio' name='q1' value='3'> Incapacidad para satisfacer la demanda</label><br>
-        </div>
-
-        <!-- Pregunta 3 -->
-        <div class="question">
-        <p><strong>3. ¿Quién se encarga de transformar requisitos en un diseño técnico del sistema?</strong></p>
-        <label><input type='radio' name='q2' value='0'> Desarrollador</label><br>
-        <label><input type='radio' name='q2' value='1'> Analista de sistemas</label><br>
-        <label><input type='radio' name='q2' value='2'> Tester</label><br>
-        <label><input type='radio' name='q2' value='3'> Usuario final</label><br>
-        </div>
-
-        <!-- Pregunta 4 -->
-        <div class="question">
-        <p><strong>4. ¿Quién construye el código fuente del software?</strong></p>
-        <label><input type='radio' name='q3' value='0'> Desarrollador</label><br>
-        <label><input type='radio' name='q3' value='1'> Administrador de red</label><br>
-        <label><input type='radio' name='q3' value='2'> Gerente de producto</label><br>
-        <label><input type='radio' name='q3' value='3'> Auditor</label><br>
-        </div>
-
-        <!-- Pregunta 5 -->
-        <div class="question">
-        <p><strong>5. ¿Quién valida que el software cumple los requisitos y funciona correctamente?</strong></p>
-        <label><input type='radio' name='q4' value='0'> Tester</label><br>
-        <label><input type='radio' name='q4' value='1'> Diseñador UI</label><br>
-        <label><input type='radio' name='q4' value='2'> Arquitecto</label><br>
-        <label><input type='radio' name='q4' value='3'> Cliente</label><br>
-        </div>
-
-        <!-- Pregunta 6 -->
-        <div class="question">
-        <p><strong>6. ¿Quién define la visión del producto y las prioridades de desarrollo?</strong></p>
-        <label><input type='radio' name='q5' value='0'> Arquitecto</label><br>
-        <label><input type='radio' name='q5' value='1'> Gerente de producto</label><br>
-        <label><input type='radio' name='q5' value='2'> Desarrollador</label><br>
-        <label><input type='radio' name='q5' value='3'> Tester</label><br>
-        </div>
-
-        <!-- Pregunta 7 -->
-        <div class="question">
-        <p><strong>7. ¿Quién diseña la experiencia visual e interactiva del usuario?</strong></p>
-        <label><input type='radio' name='q6' value='0'> Diseñador UX/UI</label><br>
-        <label><input type='radio' name='q6' value='1'> Analista</label><br>
-        <label><input type='radio' name='q6' value='2'> Tester</label><br>
-        <label><input type='radio' name='q6' value='3'> Arquitecto de software</label><br>
-        </div>
-
-        <!-- Pregunta 8 -->
-        <div class="question">
-        <p><strong>8. ¿Quién se encarga de las decisiones técnicas de alto nivel?</strong></p>
-        <label><input type='radio' name='q7' value='0'> Tester</label><br>
-        <label><input type='radio' name='q7' value='1'> Arquitecto</label><br>
-        <label><input type='radio' name='q7' value='2'> Gerente de producto</label><br>
-        <label><input type='radio' name='q7' value='3'> Desarrollador senior</label><br>
-        </div>
-
-        <button type="submit" class="btn-enviar">Enviar respuestas</button>
-    </form>
-
-    <hr>
-
-    <!-- NUEVO CUESTIONARIO: Modelos de ciclo de vida y RUP/Ágil -->
-    <div class="new-quiz">
-        <h2>Test: Modelos de ciclo de vida</h2>
-        <form id="quiz-new-form">
-            <!-- Pregunta 1 -->
-            <div class="question">
-            <p><strong>1. ¿Cuál es la principal desventaja del modelo en cascada?</strong></p>
-            <label><input type="radio" name="q_new0" value="A"> A) Es muy costoso implementarlo</label><br>
-            <label><input type="radio" name="q_new0" value="B"> B) No permite volver atrás ni cambios de requisitos</label><br>
-            <label><input type="radio" name="q_new0" value="C"> C) Requiere muchos programadores</label><br>
-            <label><input type="radio" name="q_new0" value="D"> D) No tiene fases definidas</label><br>
-            </div>
-
-            <!-- Pregunta 2 -->
-            <div class="question">
-            <p><strong>2. En el modelo espiral, ¿qué se hace en cada vuelta de la espiral?</strong></p>
-            <label><input type="radio" name="q_new1" value="A"> A) Análisis → Diseño → Codificación → Pruebas</label><br>
-            <label><input type="radio" name="q_new1" value="B"> B) Identificar riesgos → Prototipo → Evaluación → Planificación</label><br>
-            <label><input type="radio" name="q_new1" value="C"> C) Planificación → Ejecución → Control → Cierre</label><br>
-            <label><input type="radio" name="q_new1" value="D"> D) Requisitos → Prototipo → Implementación → Mantenimiento</label><br>
-            </div>
-
-            <!-- Pregunta 3 -->
-            <div class="question">
-            <p><strong>3. ¿Qué modelo entrega versiones funcionales del producto desde etapas tempranas?</strong></p>
-            <label><input type="radio" name="q_new2" value="A"> A) Modelo en cascada</label><br>
-            <label><input type="radio" name="q_new2" value="B"> B) Modelo incremental y modelo espiral</label><br>
-            <label><input type="radio" name="q_new2" value="C"> C) Modelo en V</label><br>
-            <label><input type="radio" name="q_new2" value="D"> D) Modelo de prototipado</label><br>
-            </div>
-
-            <!-- Pregunta 4 -->
-            <div class="question">
-            <p><strong>4. El modelo más adecuado cuando el cliente no tiene claros los requisitos es…</strong></p>
-            <label><input type="radio" name="q_new3" value="A"> A) Modelo en cascada</label><br>
-            <label><input type="radio" name="q_new3" value="B"> B) Modelo incremental</label><br>
-            <label><input type="radio" name="q_new3" value="C"> C) Modelo evolutivo (prototipado)</label><br>
-            <label><input type="radio" name="q_new3" value="D"> D) Modelo espiral</label><br>
-            </div>
-
-            <!-- Pregunta 5 -->
-            <div class="question">
-            <p><strong>5. ¿En qué modelo de ciclo de vida el riesgo es el eje principal de decisión?</strong></p>
-            <label><input type="radio" name="q_new4" value="A"> A) Modelo en cascada</label><br>
-            <label><input type="radio" name="q_new4" value="B"> B) Modelo incremental</label><br>
-            <label><input type="radio" name="q_new4" value="C"> C) Modelo en V</label><br>
-            <label><input type="radio" name="q_new4" value="D"> D) Modelo espiral</label><br>
-            </div>
-
-            <!-- Pregunta 6 -->
-            <div class="question">
-            <p><strong>6. ¿Cuál es la característica principal del modelo incremental?</strong></p>
-            <label><input type="radio" name="q_new5" value="A"> A) Se completa todo el proyecto antes de entregar</label><br>
-            <label><input type="radio" name="q_new5" value="B"> B) El producto se construye y entrega por partes funcionales</label><br>
-            <label><input type="radio" name="q_new5" value="C"> C) Se enfoca principalmente en riesgos</label><br>
-            <label><input type="radio" name="q_new5" value="D"> D) Requiere requisitos completamente definidos</label><br>
-            </div>
-
-            <!-- Pregunta 7 -->
-            <div class="question">
-            <p><strong>7. En el modelo en cascada, ¿cuándo se detectan la mayoría de los errores?</strong></p>
-            <label><input type="radio" name="q_new6" value="A"> A) Durante el análisis de requisitos</label><br>
-            <label><input type="radio" name="q_new6" value="B"> B) En la fase de diseño</label><br>
-            <label><input type="radio" name="q_new6" value="C"> C) Durante la codificación</label><br>
-            <label><input type="radio" name="q_new6" value="D"> D) En la fase de verificación/pruebas (muy tarde)</label><br>
-            </div>
-
-            <!-- Pregunta 8 -->
-            <div class="question">
-            <p><strong>8. ¿Qué modelo combina elementos de prototipado y gestión explícita de riesgos?</strong></p>
-            <label><input type="radio" name="q_new7" value="A"> A) Modelo en cascada</label><br>
-            <label><input type="radio" name="q_new7" value="B"> B) Modelo incremental</label><br>
-            <label><input type="radio" name="q_new7" value="C"> C) Modelo en V</label><br>
-            <label><input type="radio" name="q_new7" value="D"> D) Espiral</label><br>
-            </div>
-
-            <hr>
-
-            <h2>Test: RUP y Ágil</h2>
-
-            <!-- Pregunta 1 -->
-            <div class="question">
-            <p><strong>1. ¿En qué fase de RUP se construye la mayor parte del sistema?</strong></p>
-            <label><input type="radio" name="q_rup0" value="a"> a) Inicio</label><br>
-            <label><input type="radio" name="q_rup0" value="b"> b) Elaboración</label><br>
-            <label><input type="radio" name="q_rup0" value="c"> c) Construcción</label><br>
-            <label><input type="radio" name="q_rup0" value="d"> d) Transición</label><br>
-            </div>
-
-            <!-- Pregunta 2 -->
-            <div class="question">
-            <p><strong>2. En Scrum, ¿quién es el responsable de priorizar el Product Backlog?</strong></p>
-            <label><input type="radio" name="q_rup1" value="a"> a) Scrum Master</label><br>
-            <label><input type="radio" name="q_rup1" value="b"> b) Product Owner</label><br>
-            <label><input type="radio" name="q_rup1" value="c"> c) Development Team</label><br>
-            <label><input type="radio" name="q_rup1" value="d"> d) Stakeholders</label><br>
-            </div>
-
-            <!-- Pregunta 3 -->
-            <div class="question">
-            <p><strong>3. ¿Cuál de estas opciones NO es un principio del Manifiesto Ágil?</strong></p>
-            <label><input type="radio" name="q_rup2" value="a"> a) Individuos e interacciones sobre procesos y herramientas</label><br>
-            <label><input type="radio" name="q_rup2" value="b"> b) Software funcionando sobre documentación extensiva</label><br>
-            <label><input type="radio" name="q_rup2" value="c"> c) Colaboración con el cliente sobre negociación contractual</label><br>
-            <label><input type="radio" name="q_rup2" value="d"> d) Seguir un plan es más importante que responder al cambio</label><br>
-            </div>
-
-            <!-- Pregunta 4 -->
-            <div class="question">
-            <p><strong>4. RUP se caracteriza por ser:</strong></p>
-            <label><input type="radio" name="q_rup3" value="a"> a) Iterativo e incremental</label><br>
-            <label><input type="radio" name="q_rup3" value="b"> b) Predictivo y secuencial</label><br>
-            <label><input type="radio" name="q_rup3" value="c"> c) En cascada</label><br>
-            <label><input type="radio" name="q_rup3" value="d"> d) Rígido y no adaptable</label><br>
-            </div>
-
-            <button type="submit" class="btn-enviar">Enviar respuestas</button>
-        </form>
+    <div class="question">
+        <p><strong>2. ¿Qué es un requisito no funcional?</strong></p>
+        <label><input type="radio" name="q1" value="2"> Describe características de calidad del sistema</label><br>
+        <label><input type="radio" name="q1" value="0"> Describe funciones del sistema</label><br>
     </div>
 
-</div>
+    <div class="question">
+        <p><strong>3. ¿Qué es un caso de uso?</strong></p>
+        <label><input type="radio" name="q2" value="1"> Describe interacción actor–sistema</label><br>
+        <label><input type="radio" name="q2" value="0"> Es un código fuente del sistema</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>4. El análisis de requisitos sirve para…</strong></p>
+        <label><input type="radio" name="q3" value="0"> Entender qué necesita el cliente</label><br>
+        <label><input type="radio" name="q3" value="1"> Diseñar interfaces gráficas</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>5. ¿Qué es un actor?</strong></p>
+        <label><input type="radio" name="q4" value="0"> Usuario o sistema externo que interactúa</label><br>
+        <label><input type="radio" name="q4" value="1"> Un módulo interno del sistema</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>6. ¿Qué es un diagrama de casos de uso?</strong></p>
+        <label><input type="radio" name="q5" value="1"> Representación gráfica de actores y casos</label><br>
+        <label><input type="radio" name="q5" value="0"> Un manual de usuario</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>7. ¿Qué es un stakeholder?</strong></p>
+        <label><input type="radio" name="q6" value="0"> Persona interesada en el proyecto</label><br>
+        <label><input type="radio" name="q6" value="1"> El programador principal</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>8. ¿Qué es un requisito?</strong></p>
+        <label><input type="radio" name="q7" value="1"> Condición necesaria para el sistema</label><br>
+        <label><input type="radio" name="q7" value="0"> Un archivo de texto</label><br>
+    </div>
+
+
+    <!-- ======================= -->
+    <!--  SEGUNDO CUESTIONARIO  -->
+    <!-- ======================= -->
+
+    <h3>Ciclo de vida, metodologías y RUP / Ágil (8 preguntas)</h3>
+
+    <div class="question">
+        <p><strong>9. ¿Qué modelo describe etapas lineales?</strong></p>
+        <label><input type="radio" name="q_new0" value="A"> Espiral</label><br>
+        <label><input type="radio" name="q_new0" value="B"> Cascada</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>10. En RUP, una fase importante es…</strong></p>
+        <label><input type="radio" name="q_new1" value="A"> Abstracción</label><br>
+        <label><input type="radio" name="q_new1" value="B"> Elaboración</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>11. ¿Qué es Scrum?</strong></p>
+        <label><input type="radio" name="q_new2" value="A"> Un lenguaje de programación</label><br>
+        <label><input type="radio" name="q_new2" value="B"> Metodología ágil</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>12. ¿Qué artefacto es propio de Scrum?</strong></p>
+        <label><input type="radio" name="q_new3" value="A"> Diagrama UML</label><br>
+        <label><input type="radio" name="q_new3" value="C"> Product Backlog</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>13. En ágiles, las entregas deben ser…</strong></p>
+        <label><input type="radio" name="q_new4" value="D"> Frecuentes</label><br>
+        <label><input type="radio" name="q_new4" value="A"> Anuales</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>14. En RUP, los casos de uso son…</strong></p>
+        <label><input type="radio" name="q_new5" value="B"> Base del proceso</label><br>
+        <label><input type="radio" name="q_new5" value="A"> Opcionales</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>15. ¿Qué rol existe en Scrum?</strong></p>
+        <label><input type="radio" name="q_new6" value="D"> Product Owner</label><br>
+        <label><input type="radio" name="q_new6" value="A"> Ingeniero Jefe</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>16. En RUP, la fase final es…</strong></p>
+        <label><input type="radio" name="q_new7" value="D"> Transición</label><br>
+        <label><input type="radio" name="q_new7" value="A"> Evaluación</label><br>
+    </div>
+
+
+    <!-- ======================= -->
+    <!--   TERCER CUESTIONARIO   -->
+    <!-- ======================= -->
+
+    <h3>RUP y Ágil – Test Final (4 preguntas)</h3>
+
+    <div class="question">
+        <p><strong>17. En Scrum, ¿quién gestiona el backlog?</strong></p>
+        <label><input type="radio" name="q_rup0" value="a"> Scrum Master</label><br>
+        <label><input type="radio" name="q_rup0" value="c"> Product Owner</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>18. En RUP, la fase inicial es…</strong></p>
+        <label><input type="radio" name="q_rup1" value="b"> Inicio</label><br>
+        <label><input type="radio" name="q_rup1" value="a"> Construcción</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>19. Scrum trabaja en…</strong></p>
+        <label><input type="radio" name="q_rup2" value="d"> Sprints</label><br>
+        <label><input type="radio" name="q_rup2" value="a"> Mesociclos</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>20. En ágil, el trabajo se mide en…</strong></p>
+        <label><input type="radio" name="q_rup3" value="a"> Historias de usuario</label><br>
+        <label><input type="radio" name="q_rup3" value="b"> Bloques</label><br>
+    </div>
+
+
+    <!-- BOTÓN FINAL -->
+    <br>
+    <button type="submit" class="btn-enviar">ENVIAR TODO</button>
+
+</form>
+
 </div>
 
 <script src="cuestionario.js"></script>
-</body>
-</html>
 
 </body>
 </html>
