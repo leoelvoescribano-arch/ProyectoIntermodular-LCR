@@ -2,42 +2,304 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Desarrollo del Software</title>
+    <title>Proyecto Intermodular</title>
     <link rel="stylesheet" href="desarrollo.css">
 </head>
 <body>
+    <a class="back" href="index.html">← Volver</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos de Software e Ingeniería del Software</title>
+</head>
+<body>
 
-<a class="back" href="index.html">← Volver</a>
+<h1>Conceptos de Software e Ingeniería del Software</h1>
 
-<header>
-    <h1>Desarrollo del Software</h1>
-    <br>
-   <nav>
-    <a href="index.html" class="nav-link">Inicio</a>
-    <a href="ides.html" class="nav-link">IDES</a>
-    <a href="sector.html" class="nav-link">Sector Productivo</a>
-    <a href="cuestionario.html" class="nav-link">Cuestionarios</a>
-  </nav>
-</br>
-</header>
+<h2>1. ¿Qué es el Software?</h2>
+<p>
+El software es la parte intangible del ordenador, es decir, todo aquello que no puedes tocar físicamente, pero que hace que el ordenador (hardware) funcione y realice tareas útiles.
+En palabras más concretas:
+Definición sencilla (estilo RAE):
+El software es el conjunto de programas, instrucciones y datos que le indican al ordenador qué tareas debe realizar.
+Definición más completa (estilo Pressman, que aparece en tu presentación):
+El software no solo son los programas ejecutables, sino que incluye tres elementos:
 
-<div class="content">
-    <p>¿Qué es el software?</p>
-    <p>
-        El software es el conjunto de programas, aplicaciones y datos que permiten a un 
-        ordenador o dispositivo electrónico realizar tareas específicas. Representa la parte 
-        lógica del sistema, es decir, las instrucciones que indican al hardware cómo debe 
-        funcionar.
-    </p>
+Instrucciones (los propios programas o aplicaciones).
+Estructuras de datos (la forma en que se organiza la información que usa el programa).
+Documentación (manuales, guías, comentarios del código, etc.) que explica cómo funciona y cómo usarlo.
+</p>
+<h2>2. Tipos de software</h2>
+<p>
+	Software de sistemas: Windows, macOS, Linux… Infraestructura con él.
+	Software de programación: herramientas que usan los programadores (editores, compiladores…).
+	Software de aplicación: programas cotidianos (navegadores, procesadores de texto, videojuegos…).
+</p>
+<h2>3. ¿Como funciona el ordenador?</h2>
+<p>
+    El ordenador tiene tres partes principales:
+1.	Unidad Central de Proceso (CPU)
+	Ejecuta las instrucciones de los programas, traduciendo operaciones complejas en operaciones aritméticas y lógicas básicas.
+	Unidad Aritmético-Lógica (ALU): ejecuta operaciones aritméticas y lógicas.
+	Unidad de Control (UC): recoge y ordena la ejecución de instrucciones.
+	Registros: almacenamiento interno de la CPU.
+2.	Memoria Principal (RAM)
+	Contiene las instrucciones del programa y los datos.
+	Es una memoria volátil que se borra al apagar el ordenador.
+3.	Unidad de Entrada/Salida
+	Periféricos de Entrada: teclado, ratón.
+	Periféricos de Salida: pantalla, impresora.
+	Periféricos de Entrada/Salida: módem, tarjeta de red, dispositivos de almacenamiento.
 
-    <p>
-        Se divide principalmente en tres categorías: 
-        <strong>software de sistema</strong> (como los sistemas operativos), 
-        <strong>software de aplicación</strong> (como navegadores, editores de texto o juegos), 
-        y <strong>software de programación</strong> (herramientas usadas por desarrolladores 
-        para crear nuevos programas).
-    </p>
-</div>
+</p>
+<h2>4. Máquinas Virtuales: Concepto y Efectividad</h2>
+<p>
+    ¿En qué consiste la máquina virtual? Una máquina virtual (VM) es un software que simula un sistema de computación integral, permitiendo el funcionamiento de un sistema operativo y programas como si estuvieran integrados en una computadora física independiente. Es básicamente un ordenador que se inserta en otro.
+</p>
+<h2>4.1. Máquinas Virtuales de Sistema</h2>
+<p>
+   Las aplicaciones de virtualización emulan un ordenador, permitiendo instalar sistemas operativos con componentes propios. La experiencia es similar a la de una máquina real. Ejemplos como VMware Workstation y VirtualBox son útiles para tener varios sistemas en el mismo equipo. Su desventaja es el alto consumo de recursos del ordenador físico, especialmente memoria RAM y espacio en disco.
+</p>
+<h2>4.2. Máquinas Virtuales de Proceso</h2>
+<p>
+    Una máquina virtual ejecuta un proceso específico dentro de un sistema operativo, activándose al inicio del proceso y deteniéndose al finalizar. Proporciona un entorno de ejecución independiente del hardware y del sistema operativo, permitiendo que los programas se ejecuten uniformemente en distintas plataformas. Un ejemplo notable es la Máquina Virtual de Java (JVM).
+</p>
+<h2>Proceso para Ejecutar un Programa en Java</h2>
+<p>
+ 1.	Creación del código fuente: El desarrollador escribe el programa en lenguaje Java utilizando un editor de texto (.java).
+ 2.	Compilación: El código fuente se compila utilizando el compilador javac, produciendo un archivo con extensión .class si no se detectan errores. Este archivo contiene un lenguaje intermedio llamado bytecode, el cual es independiente de la plataforma.
+ 3.	Ejecución: La Máquina Virtual de Java traduce el archivo .class a código binario para su ejecución. Como la JVM está disponible en múltiples sistemas operativos (Windows, Linux, macOS, etc.), los programas pueden ejecutarse en diversas plataformas sin modificaciones.
+</p>
+<h2>5. Lenguajes de Programación</h2>
+<p>
+    Un lenguaje de programación es un conjunto estructurado de símbolos, palabras y reglas gramaticales que permite a los programadores escribir instrucciones específicas para que una computadora ejecute tareas. Es una herramienta que actúa como puente entre el ser humano y la máquina, permitiendo expresar procesos lógicos de manera comprensible tanto para el programador como para el sistema informático.
+</p>
+<h2>6. Conceptos de Código</h2>
+<p>
+Código Fuente: El código fuente es el conjunto de instrucciones que los programadores escriben en un lenguaje de programación para hacer que un programa o aplicación funcione. Es como el “guión” que le dice a la computadora qué hacer. Este código se puede modificar y mejorar.
+Código Objeto: Es el resultado de convertir el código fuente a un formato que la computadora puede entender, pero aún no es completamente ejecutable. Es un archivo intermedio que contiene instrucciones en lenguaje de bajo nivel, generalmente en código binario, pero necesita pasar por un proceso de enlace (linking).
+Código Ejecutable: Es el archivo final que la computadora puede ejecutar directamente. Es el resultado de enlazar todos los archivos de código objeto.
 
+</p>
+<h2>7. Proceso de Obtención de Código Ejecutable a partir de Código Fuente</h2>
+<p>
+    1.	Escritura del Código Fuente: El programador escribe el código utilizando un editor de texto o un IDE.
+2.	Compilación: El compilador convierte el código fuente en código objeto, verificando errores de sintaxis.
+3.	Enlazado (Linking): El enlazador combina el código objeto con las bibliotecas necesarias para generar el archivo ejecutable final.
+4.	Generación del Archivo Ejecutable: Resultado → .exe, .out, etc.
+5.	Depuración y Optimización: Uso de depuradores (ej. GDB) y optimizadores.
+El caso de Java Java combina compilación e interpretación:
+•	Primero el código fuente se compila a bytecode (intermedio).
+•	Luego, este bytecode es interpretado (o compilado JIT) por la máquina virtual de Java (JVM).
+Herramientas Editores, compiladores/intérpretes, enlazadores → normalmente integrados en IDEs (Eclipse, Visual Studio, IntelliJ…).
+</p>
+<h2>8. Tipos de Traductores</h2>
+<p>
+    1.	Compiladores
+	Traducen todo el código fuente de una vez.
+	Detectan errores de sintaxis.
+	Generan código objeto (puede necesitar ensamblado y enlazado).
+	El ejecutable resultante se ejecuta sin volver a compilar.
+2.	Intérpretes
+	Traducen y ejecutan línea por línea.
+	Más lentos, pero permiten ejecución inmediata y mayor portabilidad.
+</p>
+<h2>9. Clasificación de los lenguajes de programación</h2>
+<p>
+    Según cercanía al lenguaje máquina:
+•	Lenguajes de bajo nivel (lenguaje máquina): binario, muy difíciles.
+•	Lenguajes intermedios (ensambladores): códigos simbólicos, 1 instrucción ensamblador = 1 instrucción máquina.
+•	Lenguajes de alto nivel: Java, C++, Python, JavaScript… Más fáciles y productivos.
+Ventajas de los lenguajes de alto nivel
+•	Más fáciles de aprender y usar.
+•	Permiten crear programas más complejos.
+•	Mayor productividad.
+Desventajas
+•	Necesitan traducción.
+•	Mayor consumo de recursos.
+•	Menor eficiencia que bajo nivel.
+Características principales de los lenguajes
+•	Precisos
+•	Tienen sintaxis (reglas gramaticales)
+•	Muy diversos
+Elementos básicos de un lenguaje de programación
+•	Identificadores
+•	Constantes
+•	Operadores
+•	Instrucciones
+•	Comentarios
+Paradigmas de programación
+•	Programación estructurada
+•	Programación orientada a objetos (POO) ← dominante hoy
+</p>
+<h2>10. Razón de ser de la Ingeniería del Software</h2>
+<p>
+    Surgió como respuesta a la creciente complejidad y a la “crisis del software”. Objetivos básicos
+1.	Mejora la calidad del software
+2.	Mejorar el proceso de desarrollo
+3.	Gestión de la complejidad
+4.	Incrementar la mantenibilidad
+5.	Fomentar la reutilización
+</p>
+<h2>11. Fases del desarrollo de una aplicación informática</h2>
+<p>
+    El desarrollo de una aplicación informática sigue un conjunto de etapas organizadas para asegurar que el producto final funcione correctamente y cumpla con las necesidades del usuario. Estas fases forman parte del ciclo de vida del software.
+</p>
+<h2>12. Modelo en Cascada (Waterfall)  el más antiguo</h2>
+<p>
+    Es uno de los primeros modelos de desarrollo de software. Se llama en cascada porque las fases se ejecutan de forma secuencial, una después de otra, como si fueran “cayendo” en cascada
+</p>
+<h3>Características principales</h3>
+<p>
+Secuencial y lineal: No se avanza a la siguiente fase hasta terminar la anterior.
+Documentación completa: Cada fase debe ser documentada para continuar.
+Poca retroalimentación: No se regresa fácilmente a fases previas.
+Ideal para proyectos bien definidos desde el inicio.
+</p>
+<h3>Fases del Modelo en Cascada</h3>
+<p>
+1. Requisitos
+
+    Se identifican todas las necesidades del cliente antes de comenzar.
+
+    Se redacta un documento detallado: funciones, restricciones, objetivos.
+
+2. Diseño
+
+    Se define la arquitectura del sistema.
+
+    Se elabora el diseño de bases de datos, módulos, interfaces, y flujo de la aplicación.
+
+    Incluye diagramas y especificaciones técnicas.
+
+3. Implementación (Desarrollo)
+
+    Los programadores escriben el código fuente.
+
+    Cada módulo se programa siguiendo el diseño previo.
+
+    Todo se integra al final.
+
+4. Verificación (Pruebas)
+
+    Se revisa que el software funcione correctamente.
+
+    Se detectan errores, inconsistencias o fallos.
+
+    Se realizan pruebas funcionales, pruebas de integración y pruebas de sistema.
+
+5. Mantenimiento
+
+    Se corrigen errores encontrados después de la entrega.
+
+    Se hacen ajustes o mejoras.
+
+    Incluye actualizaciones para mantener la aplicación funcionando.
+</p>
+<h3>Ventajas del Modelo en Cascada</h3>
+<p>
+Simple y fácil de entender.
+Buena organización: Cada fase tiene un inicio y un fin claramente definidos.
+Ideal para proyectos pequeños o con requisitos muy claros.
+Mucha documentación, útil para equipos nuevos o grandes.
+</p>
+<h3>Desventajas del Modelo en Cascada</h3>
+<p>
+Poca flexibilidad: No permite cambios fácilmente una vez que se pasa una fase.
+Riesgo alto: Si un requisito se entendió mal al inicio, se arrastra el error hasta el final.
+Cliente poco involucrado: La mayor parte del tiempo solo ve el producto al final.
+Largo tiempo de espera: Las pruebas se realizan al final del desarrollo.
+</p>
+<h2>13. Otros modelos de ciclo de vida</h2>
+<h3>Modelo Incremental</h3>
+<p>
+Idea principal: Se desarrolla el software en partes o incrementos, cada uno con funcionalidades completas.
+
+Cómo funciona:
+Se construye un núcleo básico del sistema.
+Se agregan incrementos que amplían las funcionalidades.
+Cada incremento se prueba y se entrega al usuario.
+
+Ventajas:
+Permite entregar funcionalidades antes de terminar todo el proyecto.
+Facilita cambios y ajustes en incrementos posteriores.
+
+Desventajas:
+Puede requerir más planificación y gestión de integración.
+La arquitectura inicial debe estar bien diseñada para soportar los incrementos.
+</p>
+<h3>Modelo en Espiral</h3>
+<p>
+Idea principal: Combina desarrollo iterativo con un enfoque en la gestión de riesgos.
+
+Cómo funciona:
+El desarrollo se realiza en ciclos (espirales).
+Cada ciclo pasa por cuatro fases: planificación, análisis de riesgos, desarrollo y evaluación del cliente.
+
+Ventajas:
+Ideal para proyectos grandes y complejos.
+Permite identificar y mitigar riesgos desde el inicio.
+Facilita cambios en cualquier etapa.
+
+Desventajas:
+Más complejo y costoso que modelos lineales.
+Requiere personal capacitado en gestión de riesgos.
+</p>
+<h3>Proceso Unificado de Rational (RUP)</h3>
+<p>
+Idea principal: Modelo iterativo con cuatro fases principales que cubren todo el ciclo de vida del software.
+
+Fases del RUP:
+Inicio (Inception): Definir objetivos y viabilidad del proyecto.
+Elaboración (Elaboration): Analizar riesgos, requisitos y arquitectura.
+Construcción (Construction): Programar, integrar y probar el software.
+Transición (Transition): Entregar el software al usuario y entrenar al personal.
+
+Ventajas:
+Flexible y adaptable a cambios.
+Permite iteraciones para mejorar el producto continuamente.
+Buen manejo de riesgos y calidad.
+
+Desventajas:
+Puede ser costoso y complejo de implementar.
+Requiere experiencia en metodologías iterativas.
+</p>
+<h2>14. Metodologías ágiles (principios)</h2>
+<p>
+    •	Individuos e interacciones > procesos y herramientas
+•	Software funcionando > documentación exhaustiva
+•	Colaboración con el cliente > negociación contractual
+•	Respuesta al cambio > seguir un plan rígido
+Programación Extrema (XP) – Kent Beck
+•	Simplicidad, comunicación, retroalimentación, valentía, respeto
+•	Pruebas continuas, programación en pareja, refactorización…
+Scrum – Jeff Sutherland
+•	Sprints (ciclos cortos)
+•	Pilares: Transparencia, Inspección, Adaptación
+•	Reuniones: planificación, daily, review, retrospectiva
+</p>
+<h2>15. Roles / Perfiles en un proyecto de software</h2>
+<P>
+•	Jefe de proyecto: planificación, seguimiento, control y cierre. Máximo responsable.
+•	Expertos del dominio: conocen la realidad del negocio/problema.
+•	Analista: comunica con expertos del dominio y define requisitos funcionales.
+•	Arquitecto: define la arquitectura global del sistema (cómo se divide en componentes).
+•	Diseñador (o analista técnico/orgánico): diseña en detalle los componentes.
+•	Programador: escribe el código fuente.
+•	Probador (tester): ejecuta pruebas unitarias, integración, sistema… Garantiza calidad.
+•	Encargado de la implantación: empaquetado, instalación, gestión de configuración y versiones.
+</P>
+<h2>16. Fases detalladas del ciclo de vida (modelo clásico)</h2>
+<p>
+•	Análisis: determinar QUÉ debe hacer el sistema.
+•	Diseño: decidir CÓMO se va a hacer (componentes, bases de datos, etc.).
+•	Implementación / Programación
+•	Pruebas:
+    o	Unitarias (módulos aislados)
+    o	Integración
+    o	Sistema completo
+    o	Validación con requisitos del cliente
+•	Explotación: instalación y puesta en marcha en el cliente.
+•	Mantenimiento: corrección, adaptación, perfeccionamiento y prevención tras la entrega.
+</p>
 </body>
 </html>
