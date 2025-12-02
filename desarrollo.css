@@ -251,3 +251,7 @@ code {
     box-shadow: 0 0 12px #00eaff;
     transform: scale(1.08);
 }
+header {
+    padding: 20px;
+    text-align: center;
+}
