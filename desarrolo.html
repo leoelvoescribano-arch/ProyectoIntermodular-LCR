@@ -93,18 +93,53 @@ Código Objeto: Es el resultado de convertir el código fuente a un formato que 
 Código Ejecutable: Es el archivo final que la computadora puede ejecutar directamente. Es el resultado de enlazar todos los archivos de código objeto.
 
 </p>
-<h2>7. Proceso de Obtención de Código Ejecutable a partir de Código Fuente</h2>
-<p>
-    1.	Escritura del Código Fuente: El programador escribe el código utilizando un editor de texto o un IDE.
-2.	Compilación: El compilador convierte el código fuente en código objeto, verificando errores de sintaxis.
-3.	Enlazado (Linking): El enlazador combina el código objeto con las bibliotecas necesarias para generar el archivo ejecutable final.
-4.	Generación del Archivo Ejecutable: Resultado → .exe, .out, etc.
-5.	Depuración y Optimización: Uso de depuradores (ej. GDB) y optimizadores.
-El caso de Java Java combina compilación e interpretación:
-•	Primero el código fuente se compila a bytecode (intermedio).
-•	Luego, este bytecode es interpretado (o compilado JIT) por la máquina virtual de Java (JVM).
-Herramientas Editores, compiladores/intérpretes, enlazadores → normalmente integrados en IDEs (Eclipse, Visual Studio, IntelliJ…).
-</p>
+<div class="codigo-ejecutable">
+    <h2>7. Proceso de Obtención de Código Ejecutable a partir de Código Fuente</h2>
+
+    <ol class="lista-numerada">
+        <li>
+            <strong>Escritura del Código Fuente:</strong>  
+            El programador escribe el código utilizando un editor de texto o un IDE.
+        </li>
+
+        <li>
+            <strong>Compilación:</strong>  
+            El compilador convierte el código fuente en código objeto, verificando errores de sintaxis.
+        </li>
+
+        <li>
+            <strong>Enlazado (Linking):</strong>  
+            El enlazador combina el código objeto con las bibliotecas necesarias para generar el archivo ejecutable final.
+        </li>
+
+        <li>
+            <strong>Generación del Archivo Ejecutable:</strong>  
+            Resultado → .exe, .out, etc.
+        </li>
+
+        <li>
+            <strong>Depuración y Optimización:</strong>  
+            Uso de depuradores (ej. GDB) y optimizadores.
+        </li>
+    </ol>
+
+    <h3>El caso de Java</h3>
+
+    <ul class="lista-puntos">
+        <li>Java combina compilación e interpretación.</li>
+        <li>Primero el código fuente se compila a bytecode (intermedio).</li>
+        <li>Luego, este bytecode es interpretado o compilado JIT por la JVM.</li>
+    </ul>
+
+    <h3>Herramientas</h3>
+
+    <ul class="lista-puntos">
+        <li>Editores</li>
+        <li>Compiladores / Intérpretes</li>
+        <li>Enlazadores</li>
+        <li>Normalmente integrados en IDEs como Eclipse, Visual Studio, IntelliJ…</li>
+    </ul>
+</div>
 <div class="traductores">
     <h2>8. Tipos de Traductores</h2>
 
