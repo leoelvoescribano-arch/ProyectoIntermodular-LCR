@@ -1,74 +1,148 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // REGISTRO
-    document.getElementById("registration-form").addEventListener("submit", (e) => {
+    /* ------------------------------ DATOS DEL TEST ------------------------------ */
+
+    const preguntas = [
+        {
+            pregunta: "¿Cuál es el objetivo principal del proceso software?",
+            opciones: [
+                "Construir software rápidamente",
+                "Regular y organizar las tareas del desarrollo para obtener software de calidad",
+                "Eliminar la documentación",
+                "Aumentar el coste del desarrollo"
+            ]
+        },
+        {
+            pregunta: "¿Qué problema NO formaba parte de la crisis del software?",
+            opciones: [
+                "Costes imprecisos",
+                "Mala productividad",
+                "Software de excelente calidad",
+                "Incapacidad para satisfacer la demanda"
+            ]
+        },
+        {
+            pregunta: "¿Quién transforma requisitos en diseño técnico?",
+            opciones: [
+                "Desarrollador",
+                "Analista de sistemas",
+                "Tester",
+                "Usuario final"
+            ]
+        },
+        {
+            pregunta: "¿Quién construye el código fuente?",
+            opciones: [
+                "Desarrollador",
+                "Administrador de red",
+                "Gerente de producto",
+                "Auditor"
+            ]
+        },
+        {
+            pregunta: "¿Quién valida que el software cumple requisitos?",
+            opciones: [
+                "Tester",
+                "Diseñador UI",
+                "Arquitecto",
+                "Cliente"
+            ]
+        }
+    ];
+
+    let index = 0;
+    let respuestas = new Array(preguntas.length).fill(null);
+
+    const questionContainer = document.getElementById("question-container");
+    const progressBar = document.getElementById("progress-bar");
+    const progressContainer = document.getElementById("progress-container");
+    const prevBtn = document.getElementById("btn-prev");
+    const nextBtn = document.getElementById("btn-next");
+    const finishBtn = document.getElementById("btn-finish");
+    const resultsDiv = document.getElementById("results");
+
+    /* ------------------------------ REGISTRO ------------------------------ */
+
+    document.getElementById("registration-form").addEventListener("submit", e => {
         e.preventDefault();
-        alert("Registro completado. Ahora puedes realizar el cuestionario.");
+        document.getElementById("registration").style.display = "none";
+        progressContainer.style.display = "block";
+        document.getElementById("buttons").style.display = "block";
+        mostrarPregunta();
     });
 
-    // FUNCIÓN PARA CALIFICAR
-    function revisar(formId, respuestas) {
-        let form = document.getElementById(formId);
-        let score = 0;
+    /* ------------------------------ MOSTRAR PREGUNTA ------------------------------ */
 
-        respuestas.forEach(r => {
-            let seleccion = form.querySelector(`input[name="${r.name}"]:checked`);
-            if (seleccion) {
-                if (seleccion.value === r.value) {
-                    score++;
-                    seleccion.parentElement.classList.add("correct");
-                } else {
-                    seleccion.parentElement.classList.add("incorrect");
-                }
-            }
-        });
+    function mostrarPregunta() {
+        const q = preguntas[index];
 
-        return score;
+        questionContainer.innerHTML = `
+            <div class="question">
+                <p><strong>${index + 1}. ${q.pregunta}</strong></p>
+                ${q.opciones.map((op, i) =>
+                    `<label><input type="radio" name="preg${index}" value="${op}" ${respuestas[index] === op ? "checked" : ""}> ${op}</label><br>`
+                ).join("")}
+            </div>
+        `;
+
+        actualizarBarra();
+        actualizarBotones();
     }
 
-    // CUESTIONARIO 1
-    const r1 = [
-        {name:"q0",value:"1"},
-        {name:"q1",value:"2"},
-        {name:"q2",value:"1"},
-        {name:"q3",value:"0"},
-        {name:"q4",value:"0"},
-        {name:"q5",value:"1"},
-        {name:"q6",value:"0"},
-        {name:"q7",value:"1"},
-    ];
+    /* ------------------------------ BARRA DE PROGRESO ------------------------------ */
 
-    document.getElementById("quiz-form").addEventListener("submit", e => {
-        e.preventDefault();
-        let correctas = revisar("quiz-form", r1);
-        let nota = (correctas / r1.length * 10).toFixed(2);
+    function actualizarBarra() {
+        const progreso = ((index + 1) / preguntas.length) * 100;
+        progressBar.style.width = progreso + "%";
+    }
 
-        alert(`Resultados del Test 1:\nCorrectas: ${correctas}/${r1.length}\nNota: ${nota}/10`);
+    /* ------------------------------ BOTONES ------------------------------ */
+
+    function actualizarBotones() {
+        prevBtn.style.display = index > 0 ? "inline-block" : "none";
+        nextBtn.style.display = index === preguntas.length - 1 ? "none" : "inline-block";
+        finishBtn.style.display = index === preguntas.length - 1 ? "inline-block" : "none";
+    }
+
+    nextBtn.addEventListener("click", () => {
+        guardarRespuesta();
+        index++;
+        mostrarPregunta();
     });
 
-    // CUESTIONARIO 2
-    const r2 = [
-        {name:"q_new0",value:"B"},
-        {name:"q_new1",value:"B"},
-        {name:"q_new2",value:"B"},
-        {name:"q_new3",value:"C"},
-        {name:"q_new4",value:"D"},
-        {name:"q_new5",value:"B"},
-        {name:"q_new6",value:"D"},
-        {name:"q_new7",value:"D"},
-
-        {name:"q_rup0",value:"c"},
-        {name:"q_rup1",value:"b"},
-        {name:"q_rup2",value:"d"},
-        {name:"q_rup3",value:"a"}
-    ];
-
-    document.getElementById("quiz-new-form").addEventListener("submit", e => {
-        e.preventDefault();
-        let correctas = revisar("quiz-new-form", r2);
-        let nota = (correctas / r2.length * 10).toFixed(2);
-
-        alert(`Resultados del Test 2:\nCorrectas: ${correctas}/${r2.length}\nNota: ${nota}/10`);
+    prevBtn.addEventListener("click", () => {
+        guardarRespuesta();
+        index--;
+        mostrarPregunta();
     });
+
+    finishBtn.addEventListener("click", () => {
+        guardarRespuesta();
+        mostrarResultados();
+    });
+
+    function guardarRespuesta() {
+        const seleccionada = document.querySelector(`input[name="preg${index}"]:checked`);
+        if (seleccionada) respuestas[index] = seleccionada.value;
+    }
+
+    /* ------------------------------ RESULTADOS ------------------------------ */
+
+    function mostrarResultados() {
+        questionContainer.style.display = "none";
+        document.getElementById("buttons").style.display = "none";
+        progressContainer.style.display = "none";
+
+        let html = "<h2>Resultados del test</h2><ul>";
+
+        respuestas.forEach((r, i) => {
+            html += `<li><strong>${i + 1}.</strong> ${r ?? "No respondida"}</li>`;
+        });
+
+        html += "</ul>";
+
+        resultsDiv.innerHTML = html;
+        resultsDiv.style.display = "block";
+    }
 
 });

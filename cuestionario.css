@@ -57,7 +57,7 @@ h1 {
 
 .question {
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 20px;
     border: 2px solid #ff39ba;
     border-radius: 12px;
     background: rgba(255, 10, 140, 0.10);
@@ -65,16 +65,6 @@ h1 {
 
 label {
     font-size: 16px;
-}
-
-.correct {
-    color: #7CFF7C;
-    font-weight: bold;
-}
-
-.incorrect {
-    color: #FF6B6B;
-    font-weight: bold;
 }
 
 .btn-enviar {
@@ -113,4 +103,22 @@ label {
     border: 1px solid #ff39ba;
     background: rgba(255,10,140,0.05);
     color: #ffd3f5;
+}
+
+/* BARRA DE PROGRESO */
+#progress-container {
+    width: 100%;
+    background: rgba(255,10,140,0.15);
+    border: 2px solid #ff39ba;
+    height: 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #ff39ba;
+    border-radius: 12px;
+    transition: 0.4s;
 }
