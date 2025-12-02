@@ -233,3 +233,35 @@ code {
     line-height: 1.7;
     text-align: center;
 }
+.waterfall-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #f5f5f5;
+}
+
+.fase {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-left: 4px solid #ffd35c;
+}
+
+.fase h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2em;
+  color: #ffd35c;
+}
+
+.fase p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.fase:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(5px);
+  transition: 0.2s ease;
+}
