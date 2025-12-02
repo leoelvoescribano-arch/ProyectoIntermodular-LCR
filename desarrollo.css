@@ -233,40 +233,33 @@ code {
     line-height: 1.7;
     text-align: center;
 }
-<<<<<<< HEAD
-.waterfall-container {
-  max-width: 800px;
+.modelo-cascada {
+  max-width: 700px;
   margin: auto;
-  padding: 20px;
   font-family: Arial, sans-serif;
-  color: #f5f5f5;
+  color: white;
+}
+.bloque {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-.fase {
-  background: rgba(255, 255, 255, 0.07);
-  padding: 18px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  border-left: 4px solid #ffd35c;
-}
-
-.fase h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.2em;
+.bloque h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
   color: #ffd35c;
 }
 
-.fase p {
+.bloque p {
   margin: 0;
-  line-height: 1.6;
+  font-size: 0.95em;
+  line-height: 1.4;
 }
 
-.fase:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateX(5px);
-  transition: 0.2s ease;
-}
-=======
+
 .nav-link {
     display: inline-block;
     margin: 10px 15px;
@@ -289,4 +282,4 @@ header {
     padding: 20px;
     text-align: center;
 }
->>>>>>> c2c19208811fa24fc60ead17b6b8ea5151faaf30
+
