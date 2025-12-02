@@ -312,3 +312,13 @@ header {
 .lista-puntos li {
     margin-bottom: 10px;      
     line-height: 1.5;         
+}
+.lista-numerada {
+    padding-left: 40px;
+    color: #fff;
+}
+
+.lista-numerada li {
+    margin-bottom: 15px;   
+    line-height: 1.5;      
+}        
