@@ -1,76 +1,237 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const form = document.getElementById("quiz-form");
-    const questions = document.querySelectorAll(".question");
-    const nextBtn = document.getElementById("next-btn");
-    const finishBtn = document.getElementById("finish-btn");
+    /* ------------------------------ PREGUNTAS DEL TEST ------------------------------ */
+
+    const preguntas = [
+        /* --- TEST MODELOS DE CICLO DE VIDA (8 preguntas) --- */
+
+        {
+            pregunta: "¿Cuál es la principal desventaja del modelo en cascada?",
+            opciones: ["Es muy costoso", "No permite volver atrás ni cambios de requisitos", "Requiere muchos programadores", "No tiene fases definidas"],
+            correcta: "No permite volver atrás ni cambios de requisitos"
+        },
+        {
+            pregunta: "En el modelo espiral, ¿qué se hace en cada vuelta?",
+            opciones: [
+                "Análisis → Diseño → Codificación → Pruebas",
+                "Identificar riesgos → Prototipo → Evaluación → Planificación",
+                "Planificación → Ejecución → Control → Cierre",
+                "Requisitos → Prototipo → Implementación → Mantenimiento"
+            ],
+            correcta: "Identificar riesgos → Prototipo → Evaluación → Planificación"
+        },
+        {
+            pregunta: "¿Qué modelo entrega versiones funcionales desde etapas tempranas?",
+            opciones: [
+                "Modelo en cascada",
+                "Modelo incremental y modelo espiral",
+                "Modelo en V",
+                "Modelo de prototipado"
+            ],
+            correcta: "Modelo incremental y modelo espiral"
+        },
+        {
+            pregunta: "Modelo adecuado cuando el cliente no tiene claros los requisitos:",
+            opciones: [
+                "Modelo en cascada",
+                "Modelo incremental",
+                "Modelo evolutivo (prototipado)",
+                "Modelo espiral"
+            ],
+            correcta: "Modelo evolutivo (prototipado)"
+        },
+        {
+            pregunta: "¿En qué modelo el riesgo es el eje principal?",
+            opciones: [
+                "Modelo en cascada",
+                "Modelo incremental",
+                "Modelo en V",
+                "Modelo espiral"
+            ],
+            correcta: "Modelo espiral"
+        },
+        {
+            pregunta: "Característica principal del modelo incremental:",
+            opciones: [
+                "Se completa todo antes de entregar",
+                "Se construye y entrega por partes funcionales",
+                "Se enfoca en riesgos",
+                "Requiere requisitos totalmente definidos"
+            ],
+            correcta: "Se construye y entrega por partes funcionales"
+        },
+        {
+            pregunta: "En el modelo en cascada, ¿cuándo se detectan la mayoría de los errores?",
+            opciones: [
+                "Durante análisis",
+                "En la fase de diseño",
+                "Durante la codificación",
+                "En pruebas (muy tarde)"
+            ],
+            correcta: "En pruebas (muy tarde)"
+        },
+        {
+            pregunta: "¿Qué modelo combina prototipado y gestión de riesgos?",
+            opciones: [
+                "Modelo en cascada",
+                "Modelo incremental",
+                "Modelo en V",
+                "Espiral"
+            ],
+            correcta: "Espiral"
+        },
+
+        /* --- TEST RUP Y ÁGIL (4 preguntas) --- */
+
+        {
+            pregunta: "¿En qué fase de RUP se construye la mayor parte del sistema?",
+            opciones: ["Inicio", "Elaboración", "Construcción", "Transición"],
+            correcta: "Construcción"
+        },
+        {
+            pregunta: "En Scrum, ¿quién prioriza el Product Backlog?",
+            opciones: ["Scrum Master", "Product Owner", "Development Team", "Stakeholders"],
+            correcta: "Product Owner"
+        },
+        {
+            pregunta: "¿Qué opción NO es un principio del Manifiesto Ágil?",
+            opciones: [
+                "Individuos e interacciones sobre procesos y herramientas",
+                "Software funcionando sobre documentación extensiva",
+                "Colaboración con el cliente sobre negociación contractual",
+                "Seguir un plan es más importante que responder al cambio"
+            ],
+            correcta: "Seguir un plan es más importante que responder al cambio"
+        },
+        {
+            pregunta: "RUP se caracteriza por ser:",
+            opciones: [
+                "Iterativo e incremental",
+                "Predictivo y secuencial",
+                "En cascada",
+                "Rígido y no adaptable"
+            ],
+            correcta: "Iterativo e incremental"
+        }
+    ];
+
+    /* ------------------------------ VARIABLES ------------------------------ */
 
     let index = 0;
+    let respuestas = new Array(preguntas.length).fill(null);
 
-    const correctas = {
-        p1:"B", p2:"B", p3:"B", p4:"C",
-        p5:"D", p6:"B", p7:"D", p8:"D",
-        p9:"C", p10:"B", p11:"D", p12:"A"
-    };
+    const questionContainer = document.getElementById("question-container");
+    const progressBar = document.getElementById("progress-bar");
+    const progressContainer = document.getElementById("progress-container");
+    const prevBtn = document.getElementById("btn-prev");
+    const nextBtn = document.getElementById("btn-next");
+    const finishBtn = document.getElementById("btn-finish");
+    const resultsDiv = document.getElementById("results");
 
-    mostrarPregunta(0);
+    /* ------------------------------ REGISTRO ------------------------------ */
 
-    function mostrarPregunta(i) {
-        questions.forEach(q => q.style.display = "none");
-        questions[i].style.display = "block";
+    document.getElementById("registration-form").addEventListener("submit", e => {
+        e.preventDefault();
+        document.getElementById("registration").style.display = "none";
+        progressContainer.style.display = "block";
+        document.getElementById("buttons").style.display = "block";
+        mostrarPregunta();
+    });
 
-        nextBtn.style.display = i === questions.length - 1 ? "none" : "block";
-        finishBtn.style.display = i === questions.length - 1 ? "block" : "none";
+    /* ------------------------------ PINTAR PREGUNTA ------------------------------ */
+
+    function mostrarPregunta() {
+        const q = preguntas[index];
+
+        questionContainer.innerHTML = `
+            <div class="question">
+                <p><strong>${index + 1}. ${q.pregunta}</strong></p>
+                ${q.opciones.map(op =>
+                    `<label>
+                       <input type="radio" name="preg${index}" value="${op}"
+                       ${respuestas[index] === op ? "checked" : ""}> ${op}
+                     </label><br>`
+                ).join("")}
+            </div>
+        `;
+
+        actualizarBarra();
+        actualizarBotones();
+    }
+
+    /* ------------------------------ BOTONES ------------------------------ */
+
+    function actualizarBotones() {
+        prevBtn.style.display = index > 0 ? "inline-block" : "none";
+        nextBtn.style.display = index === preguntas.length - 1 ? "none" : "inline-block";
+        finishBtn.style.display = index === preguntas.length - 1 ? "inline-block" : "none";
     }
 
     nextBtn.addEventListener("click", () => {
-        if (!respuestaMarcada()) {
-            alert("Debes seleccionar una respuesta para continuar.");
-            return;
-        }
+        guardarRespuesta();
         index++;
-        mostrarPregunta(index);
+        mostrarPregunta();
     });
 
-    function respuestaMarcada() {
-        return document.querySelector(`input[name="p${index+1}"]:checked`);
+    prevBtn.addEventListener("click", () => {
+        guardarRespuesta();
+        index--;
+        mostrarPregunta();
+    });
+
+    finishBtn.addEventListener("click", () => {
+        guardarRespuesta();
+        mostrarResultados();
+    });
+
+    function guardarRespuesta() {
+        const seleccionada = document.querySelector(`input[name="preg${index}"]:checked`);
+        if (seleccionada) respuestas[index] = seleccionada.value;
     }
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    /* ------------------------------ BARRA DE PROGRESO ------------------------------ */
+
+    function actualizarBarra() {
+        progressBar.style.width = ((index + 1) / preguntas.length) * 100 + "%";
+    }
+
+    /* ------------------------------ RESULTADOS ------------------------------ */
+
+    function mostrarResultados() {
+
+        questionContainer.style.display = "none";
+        document.getElementById("buttons").style.display = "none";
+        progressContainer.style.display = "none";
 
         let aciertos = 0;
-        let resultados = "<h2>Resultados del Examen</h2><ul>";
+        let html = "<h2>Resultados del test</h2>";
 
-        for (let i = 1; i <= 12; i++) {
-            const marcada = document.querySelector(`input[name="p${i}"]:checked`);
-            const valor = marcada ? marcada.value : null;
-            const ok = correctas[`p${i}`];
+        html += "<ul>";
 
-            if (valor === ok) aciertos++;
+        preguntas.forEach((p, i) => {
+            const correcta = p.correcta;
+            const respuesta = respuestas[i];
 
-            resultados += `
+            if (respuesta === correcta) aciertos++;
+
+            html += `
                 <li>
-                    <strong>Pregunta ${i}:</strong><br>
-                    Tu respuesta: ${valor || "Sin responder"}<br>
-                    Correcta: ${ok} 
-                    ${valor === ok ? "✅" : "❌"}
-                </li><br>
+                    <strong>${i + 1}. ${p.pregunta}</strong><br>
+                    Tu respuesta: <span style="color:${respuesta === correcta ? '#7CFF7C' : '#FF6B6B'}">${respuesta ?? "No respondida"}</span><br>
+                    Correcta: <strong style="color:#7CFF7C">${correcta}</strong>
+                </li>
+                <br>
             `;
-        }
+        });
 
-        resultados += "</ul>";
+        html += "</ul>";
 
-        const nota = (aciertos / 12 * 10).toFixed(2);
+        const nota = ((aciertos / preguntas.length) * 10).toFixed(2);
 
-        form.outerHTML = `
-            <div class="container">
-                <h1>Examen terminado</h1>
-                <h2>Nota final: <strong>${nota}/10</strong></h2>
-                <h3>Aciertos: ${aciertos} / 12</h3>
-                ${resultados}
-            </div>
-        `;
-    });
+        html += `<h2 style="text-align:center;">Nota final: <span style="color:#00eaff;">${nota} / 10</span></h2>`;
+
+        resultsDiv.innerHTML = html;
+        resultsDiv.style.display = "block";
+    }
 
 });
