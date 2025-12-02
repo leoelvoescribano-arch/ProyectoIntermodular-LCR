@@ -58,16 +58,15 @@ Documentación (manuales, guías, comentarios del código, etc.) que explica có
 <p>
     ¿En qué consiste la máquina virtual? Una máquina virtual (VM) es un software que simula un sistema de computación integral, permitiendo el funcionamiento de un sistema operativo y programas como si estuvieran integrados en una computadora física independiente. Es básicamente un ordenador que se inserta en otro.
 </p>
-<h3>4.1. Máquinas Virtuales de Sistema</h3>
-<p>
-   Las aplicaciones de virtualización emulan un ordenador, permitiendo instalar sistemas operativos con componentes propios. La experiencia es similar a la de una máquina real. Ejemplos como VMware Workstation y VirtualBox son útiles para tener varios sistemas en el mismo equipo. Su desventaja es el alto consumo de recursos del ordenador físico, especialmente memoria RAM y espacio en disco.
-</p>
-<h3 class="subtitulo">4.2. Máquinas Virtuales de Proceso </h3>
+<h3 class="subtitulo">4.1. Máquinas Virtuales de Sistema</h3>
+ <p>Las aplicaciones de virtualización emulan un ordenador, permitiendo instalar sistemas operativos con componentes propios. La experiencia es similar a la de una máquina real. Ejemplos como VMware Workstation y VirtualBox son útiles para tener varios sistemas en el mismo equipo. Su desventaja es el alto consumo de recursos del ordenador físico, especialmente memoria RAM y espacio en disco.
+</p>  
+<h3 class="subtitulo">4.2. Máquinas Virtuales de Proceso</h3>
 <p>
     Una máquina virtual ejecuta un proceso específico dentro de un sistema operativo, activándose al inicio del proceso y deteniéndose al finalizar. Proporciona un entorno de ejecución independiente del hardware y del sistema operativo, permitiendo que los programas se ejecuten uniformemente en distintas plataformas. Un ejemplo notable es la Máquina Virtual de Java (JVM).
 </p>
-<h3>Proceso para Ejecutar un Programa en Java</h3>
-<p class="texto-centrado"></p>
+<h3 class="subtitulo">Proceso para Ejecutar un Programa en Java</h3>
+
 <p>
  1.	Creación del código fuente: El desarrollador escribe el programa en lenguaje Java utilizando un editor de texto (.java).
  2.	Compilación: El código fuente se compila utilizando el compilador javac, produciendo un archivo con extensión .class si no se detectan errores. Este archivo contiene un lenguaje intermedio llamado bytecode, el cual es independiente de la plataforma.
@@ -77,6 +76,9 @@ Documentación (manuales, guías, comentarios del código, etc.) que explica có
 <p>
     Un lenguaje de programación es un conjunto estructurado de símbolos, palabras y reglas gramaticales que permite a los programadores escribir instrucciones específicas para que una computadora ejecute tareas. Es una herramienta que actúa como puente entre el ser humano y la máquina, permitiendo expresar procesos lógicos de manera comprensible tanto para el programador como para el sistema informático.
 </p>
+<div class="img">
+        <img src="img/lenguaje progra.jpg" >
+</div>
 <h2>6. Conceptos de Código</h2>
 <p>
 Código Fuente: El código fuente es el conjunto de instrucciones que los programadores escriben en un lenguaje de programación para hacer que un programa o aplicación funcione. Es como el “guión” que le dice a la computadora qué hacer. Este código se puede modificar y mejorar.
@@ -152,61 +154,47 @@ Paradigmas de programación
 <p>
     Es uno de los primeros modelos de desarrollo de software. Se llama en cascada porque las fases se ejecutan de forma secuencial, una después de otra, como si fueran “cayendo” en cascada
 </p>
-<h3>Características principales</h3>
+<h3 class="subtitulo">Características principales</h3>
 <p>
 Secuencial y lineal: No se avanza a la siguiente fase hasta terminar la anterior.
 Documentación completa: Cada fase debe ser documentada para continuar.
 Poca retroalimentación: No se regresa fácilmente a fases previas.
 Ideal para proyectos bien definidos desde el inicio.
 </p>
-<h3>Fases del Modelo en Cascada</h3>
+<h3 class="subtitulo">Fases del Modelo en Cascada</h3>
 <p>
 1. Requisitos
-
     Se identifican todas las necesidades del cliente antes de comenzar.
-
     Se redacta un documento detallado: funciones, restricciones, objetivos.
 
 2. Diseño
-
     Se define la arquitectura del sistema.
-
     Se elabora el diseño de bases de datos, módulos, interfaces, y flujo de la aplicación.
-
     Incluye diagramas y especificaciones técnicas.
 
 3. Implementación (Desarrollo)
-
     Los programadores escriben el código fuente.
-
     Cada módulo se programa siguiendo el diseño previo.
-
     Todo se integra al final.
 
 4. Verificación (Pruebas)
-
     Se revisa que el software funcione correctamente.
-
     Se detectan errores, inconsistencias o fallos.
-
     Se realizan pruebas funcionales, pruebas de integración y pruebas de sistema.
 
 5. Mantenimiento
-
     Se corrigen errores encontrados después de la entrega.
-
     Se hacen ajustes o mejoras.
-
     Incluye actualizaciones para mantener la aplicación funcionando.
 </p>
-<h3>Ventajas del Modelo en Cascada</h3>
+<h3 class="subtitulo">Ventajas del Modelo en Cascada</h3>
 <p>
 Simple y fácil de entender.
 Buena organización: Cada fase tiene un inicio y un fin claramente definidos.
 Ideal para proyectos pequeños o con requisitos muy claros.
 Mucha documentación, útil para equipos nuevos o grandes.
 </p>
-<h3>Desventajas del Modelo en Cascada</h3>
+<h3 class="subtitulo">Desventajas del Modelo en Cascada</h3>
 <p>
 Poca flexibilidad: No permite cambios fácilmente una vez que se pasa una fase.
 Riesgo alto: Si un requisito se entendió mal al inicio, se arrastra el error hasta el final.
@@ -214,7 +202,7 @@ Cliente poco involucrado: La mayor parte del tiempo solo ve el producto al final
 Largo tiempo de espera: Las pruebas se realizan al final del desarrollo.
 </p>
 <h2>13. Otros modelos de ciclo de vida</h2>
-<h3>Modelo Incremental</h3>
+<h3 class="subtitulo">Modelo Incremental</h3>
 <p>
 Idea principal: Se desarrolla el software en partes o incrementos, cada uno con funcionalidades completas.
 
@@ -231,7 +219,7 @@ Desventajas:
 Puede requerir más planificación y gestión de integración.
 La arquitectura inicial debe estar bien diseñada para soportar los incrementos.
 </p>
-<h3>Modelo en Espiral</h3>
+<h3 class="subtitulo">Modelo en Espiral</h3>
 <p>
 Idea principal: Combina desarrollo iterativo con un enfoque en la gestión de riesgos.
 
@@ -248,7 +236,7 @@ Desventajas:
 Más complejo y costoso que modelos lineales.
 Requiere personal capacitado en gestión de riesgos.
 </p>
-<h3>Proceso Unificado de Rational (RUP)</h3>
+<h3 class="subtitulo">Proceso Unificado de Rational (RUP)</h3>
 <p>
 Idea principal: Modelo iterativo con cuatro fases principales que cubren todo el ciclo de vida del software.
 
