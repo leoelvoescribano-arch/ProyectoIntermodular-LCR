@@ -233,6 +233,7 @@ code {
     line-height: 1.7;
     text-align: center;
 }
+<<<<<<< HEAD
 .waterfall-container {
   max-width: 800px;
   margin: auto;
@@ -265,3 +266,27 @@ code {
   transform: translateX(5px);
   transition: 0.2s ease;
 }
+=======
+.nav-link {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 12px 20px;
+    background: rgba(0, 200, 255, 0.12);   
+    border: 2px solid #00e7ff;             
+    border-radius: 10px;
+    color: #b7f9ff;                        
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background: rgba(0, 200, 255, 0.30);
+    box-shadow: 0 0 12px #00eaff;
+    transform: scale(1.08);
+}
+header {
+    padding: 20px;
+    text-align: center;
+}
+>>>>>>> c2c19208811fa24fc60ead17b6b8ea5151faaf30

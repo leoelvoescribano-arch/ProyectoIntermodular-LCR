@@ -10,21 +10,20 @@
 <a class="back" href="index.html">← Volver</a>
 
 <header>
-<h1>Cuestionario sobre Software y Hardware</h1>
+    <h1>Cuestionario sobre Software y Hardware</h1>
 
-<nav>
-    <a href="desarrollo.html" class="nav-link">Desarrollo</a>
-    <a href="ides.html" class="nav-link">IDES</a>
-    <a href="sector.html" class="nav-link">Sector Productivo</a>
-    <a href="index.html" class="nav-link">Inicio</a>
-</nav>
-
+    <nav>
+        <a href="desarrolo.html" class="nav-link">Desarrollo</a>
+        <a href="ides.html" class="nav-link">IDES</a>
+        <a href="sector.html" class="nav-link">Sector Productivo</a>
+        <a href="index.html" class="nav-link">Inicio</a>
+    </nav>
 </header>
 
 <div id="quiz">
 
-    <!-- FORMULARIO DE REGISTRO -->
-    <div class="registration">
+    <!-- REGISTRO -->
+    <div id="registration" class="registration">
         <h2>Registro</h2>
         <form id="registration-form">
             <label for="name">Nombre:</label>
@@ -40,83 +39,23 @@
         </form>
     </div>
 
-    <hr>
+    <!-- BARRA DE PROGRESO -->
+    <div id="progress-container" style="display:none;">
+        <div id="progress-bar"></div>
+    </div>
 
-    <!-- CUESTIONARIO 1 -->
-    <form id="quiz-form">
-        <h2>Test: Software y Hardware</h2>
+    <!-- CONTENEDOR PARA LAS PREGUNTAS -->
+    <div id="question-container"></div>
 
-        <div class="question">
-        <p><strong>1. ¿Cuál es el objetivo principal del proceso software?</strong></p>
-        <label><input type="radio" name="q0" value="0"> Construir software rápidamente</label><br>
-        <label><input type="radio" name="q0" value="1"> Regular y organizar las tareas del desarrollo para obtener software de calidad</label><br>
-        <label><input type="radio" name="q0" value="2"> Eliminar la documentación</label><br>
-        <label><input type="radio" name="q0" value="3"> Aumentar el coste del desarrollo</label>
-        </div>
+    <!-- BOTONES -->
+    <div id="buttons" style="display:none; text-align:center;">
+        <button id="btn-prev" class="btn-enviar" style="display:none;">Anterior</button>
+        <button id="btn-next" class="btn-enviar">Siguiente</button>
+        <button id="btn-finish" class="btn-enviar" style="display:none;">Finalizar</button>
+    </div>
 
-        <div class="question">
-        <p><strong>2. ¿Qué problema NO formaba parte de la crisis del software?</strong></p>
-        <label><input type="radio" name="q1" value="0"> Costes imprecisos</label><br>
-        <label><input type="radio" name="q1" value="1"> Mala productividad</label><br>
-        <label><input type="radio" name="q1" value="2"> Software de excelente calidad</label><br>
-        <label><input type="radio" name="q1" value="3"> Incapacidad para satisfacer la demanda</label>
-        </div>
-
-        <div class="question">
-        <p><strong>3. ¿Quién transforma requisitos en diseño técnico?</strong></p>
-        <label><input type="radio" name="q2" value="0"> Desarrollador</label><br>
-        <label><input type="radio" name="q2" value="1"> Analista de sistemas</label><br>
-        <label><input type="radio" name="q2" value="2"> Tester</label><br>
-        <label><input type="radio" name="q2" value="3"> Usuario final</label>
-        </div>
-
-        <div class="question">
-        <p><strong>4. ¿Quién construye el código fuente?</strong></p>
-        <label><input type="radio" name="q3" value="0"> Desarrollador</label><br>
-        <label><input type="radio" name="q3" value="1"> Administrador de red</label><br>
-        <label><input type="radio" name="q3" value="2"> Gerente de producto</label><br>
-        <label><input type="radio" name="q3" value="3"> Auditor</label>
-        </div>
-
-        <div class="question">
-        <p><strong>5. ¿Quién valida que el software cumple requisitos?</strong></p>
-        <label><input type="radio" name="q4" value="0"> Tester</label><br>
-        <label><input type="radio" name="q4" value="1"> Diseñador UI</label><br>
-        <label><input type="radio" name="q4" value="2"> Arquitecto</label><br>
-        <label><input type="radio" name="q4" value="3"> Cliente</label>
-        </div>
-
-        <button type="submit" class="btn-enviar">Enviar respuestas</button>
-    </form>
-
-    <hr>
-
-    <!-- CUESTIONARIO 2 COMPLETO -->
-    <form id="quiz-new-form">
-        <h2>Test: Modelos de ciclo de vida</h2>
-
-        <div class="question">
-        <p><strong>1. Principal desventaja del modelo en cascada:</strong></p>
-        <label><input type="radio" name="q_new0" value="A"> Muy costoso</label><br>
-        <label><input type="radio" name="q_new0" value="B"> No permite volver atrás</label><br>
-        <label><input type="radio" name="q_new0" value="C"> Requiere muchos programadores</label><br>
-        <label><input type="radio" name="q_new0" value="D"> No tiene fases</label>
-        </div>
-
-        <!-- (SE INCLUYEN TODAS LAS DEMÁS PREGUNTAS TAL COMO LAS PASASTE) -->
-
-        <h2>Test: RUP y Ágil</h2>
-
-        <div class="question">
-        <p><strong>1. ¿En qué fase de RUP se construye la mayor parte?</strong></p>
-        <label><input type="radio" name="q_rup0" value="a"> Inicio</label><br>
-        <label><input type="radio" name="q_rup0" value="b"> Elaboración</label><br>
-        <label><input type="radio" name="q_rup0" value="c"> Construcción</label><br>
-        <label><input type="radio" name="q_rup0" value="d"> Transición</label>
-        </div>
-
-        <button type="submit" class="btn-enviar">Enviar respuestas</button>
-    </form>
+    <!-- RESULTADOS -->
+    <div id="results" class="content" style="display:none;"></div>
 
 </div>
 
