@@ -1,17 +1,75 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ------------------------------ PREGUNTAS DEL TEST ------------------------------ */
+    /* ------------------------------ TODAS LAS PREGUNTAS ------------------------------ */
 
     const preguntas = [
-        /* --- TEST MODELOS DE CICLO DE VIDA (8 preguntas) --- */
+
+        /* ---- 5 ORIGINALES ---- */
+        {
+            pregunta: "¿Cuál es el objetivo principal del proceso software?",
+            opciones: [
+                "Construir software rápidamente",
+                "Regular y organizar las tareas del desarrollo para obtener software de calidad",
+                "Eliminar la documentación",
+                "Aumentar el coste del desarrollo"
+            ],
+            correcta: "Regular y organizar las tareas del desarrollo para obtener software de calidad"
+        },
+        {
+            pregunta: "¿Qué problema NO formaba parte de la crisis del software?",
+            opciones: [
+                "Costes imprecisos",
+                "Mala productividad",
+                "Software de excelente calidad",
+                "Incapacidad para satisfacer la demanda"
+            ],
+            correcta: "Software de excelente calidad"
+        },
+        {
+            pregunta: "¿Quién transforma requisitos en diseño técnico?",
+            opciones: [
+                "Desarrollador",
+                "Analista de sistemas",
+                "Tester",
+                "Usuario final"
+            ],
+            correcta: "Analista de sistemas"
+        },
+        {
+            pregunta: "¿Quién construye el código fuente?",
+            opciones: [
+                "Desarrollador",
+                "Administrador de red",
+                "Gerente de producto",
+                "Auditor"
+            ],
+            correcta: "Desarrollador"
+        },
+        {
+            pregunta: "¿Quién valida que el software cumple requisitos?",
+            opciones: [
+                "Tester",
+                "Diseñador UI",
+                "Arquitecto",
+                "Cliente"
+            ],
+            correcta: "Tester"
+        },
+
+        /* ---- 12 PREGUNTAS SOBRE MODELOS DE CICLO DE VIDA ---- */
 
         {
             pregunta: "¿Cuál es la principal desventaja del modelo en cascada?",
-            opciones: ["Es muy costoso", "No permite volver atrás ni cambios de requisitos", "Requiere muchos programadores", "No tiene fases definidas"],
+            opciones: [
+                "Es muy costoso implementarlo",
+                "No permite volver atrás ni cambios de requisitos",
+                "Requiere muchos programadores",
+                "No tiene fases definidas"
+            ],
             correcta: "No permite volver atrás ni cambios de requisitos"
         },
         {
-            pregunta: "En el modelo espiral, ¿qué se hace en cada vuelta?",
+            pregunta: "En el modelo espiral, ¿qué se hace en cada vuelta de la espiral?",
             opciones: [
                 "Análisis → Diseño → Codificación → Pruebas",
                 "Identificar riesgos → Prototipo → Evaluación → Planificación",
@@ -21,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
             correcta: "Identificar riesgos → Prototipo → Evaluación → Planificación"
         },
         {
-            pregunta: "¿Qué modelo entrega versiones funcionales desde etapas tempranas?",
+            pregunta: "¿Qué modelo entrega versiones funcionales del producto desde etapas tempranas?",
             opciones: [
                 "Modelo en cascada",
                 "Modelo incremental y modelo espiral",
@@ -31,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             correcta: "Modelo incremental y modelo espiral"
         },
         {
-            pregunta: "Modelo adecuado cuando el cliente no tiene claros los requisitos:",
+            pregunta: "El modelo más adecuado cuando el cliente no tiene claros los requisitos es…",
             opciones: [
                 "Modelo en cascada",
                 "Modelo incremental",
@@ -41,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
             correcta: "Modelo evolutivo (prototipado)"
         },
         {
-            pregunta: "¿En qué modelo el riesgo es el eje principal?",
+            pregunta: "¿En qué modelo de ciclo de vida el riesgo es el eje principal de decisión?",
             opciones: [
                 "Modelo en cascada",
                 "Modelo incremental",
@@ -51,27 +109,27 @@ document.addEventListener("DOMContentLoaded", () => {
             correcta: "Modelo espiral"
         },
         {
-            pregunta: "Característica principal del modelo incremental:",
+            pregunta: "¿Cuál es la característica principal del modelo incremental?",
             opciones: [
-                "Se completa todo antes de entregar",
-                "Se construye y entrega por partes funcionales",
-                "Se enfoca en riesgos",
-                "Requiere requisitos totalmente definidos"
+                "Se completa todo el proyecto antes de entregar",
+                "El producto se construye y entrega por partes funcionales",
+                "Se enfoca principalmente en riesgos",
+                "Requiere requisitos completamente definidos"
             ],
-            correcta: "Se construye y entrega por partes funcionales"
+            correcta: "El producto se construye y entrega por partes funcionales"
         },
         {
             pregunta: "En el modelo en cascada, ¿cuándo se detectan la mayoría de los errores?",
             opciones: [
-                "Durante análisis",
+                "Durante el análisis de requisitos",
                 "En la fase de diseño",
                 "Durante la codificación",
-                "En pruebas (muy tarde)"
+                "En la fase de verificación/pruebas (muy tarde)"
             ],
-            correcta: "En pruebas (muy tarde)"
+            correcta: "En la fase de verificación/pruebas (muy tarde)"
         },
         {
-            pregunta: "¿Qué modelo combina prototipado y gestión de riesgos?",
+            pregunta: "¿Qué modelo combina elementos de prototipado y gestión explícita de riesgos?",
             opciones: [
                 "Modelo en cascada",
                 "Modelo incremental",
@@ -81,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
             correcta: "Espiral"
         },
 
-        /* --- TEST RUP Y ÁGIL (4 preguntas) --- */
+        /* ---- 4 PREGUNTAS RUP Y ÁGIL ---- */
 
         {
             pregunta: "¿En qué fase de RUP se construye la mayor parte del sistema?",
@@ -89,12 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
             correcta: "Construcción"
         },
         {
-            pregunta: "En Scrum, ¿quién prioriza el Product Backlog?",
+            pregunta: "En Scrum, ¿quién es el responsable de priorizar el Product Backlog?",
             opciones: ["Scrum Master", "Product Owner", "Development Team", "Stakeholders"],
             correcta: "Product Owner"
         },
         {
-            pregunta: "¿Qué opción NO es un principio del Manifiesto Ágil?",
+            pregunta: "¿Cuál de estas opciones NO es un principio del Manifiesto Ágil?",
             opciones: [
                 "Individuos e interacciones sobre procesos y herramientas",
                 "Software funcionando sobre documentación extensiva",
@@ -112,7 +170,73 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Rígido y no adaptable"
             ],
             correcta: "Iterativo e incremental"
+        },
+
+        /* ---- 2 PREGUNTAS FASES ---- */
+        {
+            pregunta: "¿Cuál es el objetivo principal del proceso software?",
+            opciones: [
+                "Construir software rápidamente",
+                "Regular y organizar las tareas del desarrollo para obtener software de calidad",
+                "Eliminar la documentación",
+                "Aumentar el coste del desarrollo"
+            ],
+            correcta: "Regular y organizar las tareas del desarrollo para obtener software de calidad"
+        },
+        {
+            pregunta: "¿Qué problema NO formaba parte de la crisis del software?",
+            opciones: [
+                "Costes imprecisos",
+                "Mala productividad",
+                "Software de excelente calidad",
+                "Incapacidad para satisfacer la demanda"
+            ],
+            correcta: "Software de excelente calidad"
+        },
+
+        /* ---- 8 PREGUNTAS PERFILES ---- */
+
+        {
+            pregunta: "¿Quién se encarga de transformar requisitos en un diseño técnico del sistema?",
+            opciones: ["Desarrollador", "Analista de sistemas", "Tester", "Usuario final"],
+            correcta: "Analista de sistemas"
+        },
+        {
+            pregunta: "¿Quién construye el código fuente del software?",
+            opciones: ["Desarrollador", "Administrador de red", "Gerente de producto", "Auditor"],
+            correcta: "Desarrollador"
+        },
+        {
+            pregunta: "¿Quién valida que el software cumple los requisitos y funciona correctamente?",
+            opciones: ["Tester", "Diseñador UI", "Arquitecto", "Cliente"],
+            correcta: "Tester"
+        },
+        {
+            pregunta: "¿Quién define la visión del producto y las prioridades de desarrollo?",
+            opciones: ["Arquitecto", "Gerente de producto", "Desarrollador", "Tester"],
+            correcta: "Gerente de producto"
+        },
+        {
+            pregunta: "¿Quién diseña la experiencia visual e interactiva del usuario?",
+            opciones: ["Diseñador UX/UI", "Analista", "Tester", "Arquitecto de software"],
+            correcta: "Diseñador UX/UI"
+        },
+        {
+            pregunta: "¿Quién se encarga de las decisiones técnicas de alto nivel?",
+            opciones: ["Tester", "Arquitecto de software", "Community manager", "Contable"],
+            correcta: "Arquitecto de software"
+        },
+        {
+            pregunta: "¿Quién gestiona tiempos, recursos y riesgos del proyecto?",
+            opciones: ["Administrador de sistemas", "Project manager", "UX designer", "Tester"],
+            correcta: "Project manager"
+        },
+        {
+            pregunta: "¿Quién se encarga del mantenimiento y soporte en producción?",
+            opciones: ["Equipo de soporte / DevOps", "Equipo de ventas", "Marketing", "Clientes"],
+            correcta: "Equipo de soporte / DevOps"
         }
+
     ];
 
     /* ------------------------------ VARIABLES ------------------------------ */
@@ -138,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarPregunta();
     });
 
-    /* ------------------------------ PINTAR PREGUNTA ------------------------------ */
+    /* ------------------------------ MOSTRAR PREGUNTA ------------------------------ */
 
     function mostrarPregunta() {
         const q = preguntas[index];
@@ -146,17 +270,21 @@ document.addEventListener("DOMContentLoaded", () => {
         questionContainer.innerHTML = `
             <div class="question">
                 <p><strong>${index + 1}. ${q.pregunta}</strong></p>
-                ${q.opciones.map(op =>
-                    `<label>
-                       <input type="radio" name="preg${index}" value="${op}"
-                       ${respuestas[index] === op ? "checked" : ""}> ${op}
-                     </label><br>`
+                ${q.opciones.map((op, i) =>
+                    `<label><input type="radio" name="preg${index}" value="${op}" ${respuestas[index] === op ? "checked" : ""}> ${op}</label><br>`
                 ).join("")}
             </div>
         `;
 
         actualizarBarra();
         actualizarBotones();
+    }
+
+    /* ------------------------------ BARRA DE PROGRESO ------------------------------ */
+
+    function actualizarBarra() {
+        const progreso = ((index + 1) / preguntas.length) * 100;
+        progressBar.style.width = progreso + "%";
     }
 
     /* ------------------------------ BOTONES ------------------------------ */
@@ -189,46 +317,35 @@ document.addEventListener("DOMContentLoaded", () => {
         if (seleccionada) respuestas[index] = seleccionada.value;
     }
 
-    /* ------------------------------ BARRA DE PROGRESO ------------------------------ */
-
-    function actualizarBarra() {
-        progressBar.style.width = ((index + 1) / preguntas.length) * 100 + "%";
-    }
-
     /* ------------------------------ RESULTADOS ------------------------------ */
 
     function mostrarResultados() {
-
         questionContainer.style.display = "none";
         document.getElementById("buttons").style.display = "none";
         progressContainer.style.display = "none";
 
         let aciertos = 0;
-        let html = "<h2>Resultados del test</h2>";
+        let html = "<h2>Resultados del test</h2><ul>";
 
-        html += "<ul>";
+        preguntas.forEach((preg, i) => {
+            const correcta = preg.correcta;
+            const marcada = respuestas[i];
 
-        preguntas.forEach((p, i) => {
-            const correcta = p.correcta;
-            const respuesta = respuestas[i];
-
-            if (respuesta === correcta) aciertos++;
+            if (marcada === correcta) aciertos++;
 
             html += `
                 <li>
-                    <strong>${i + 1}. ${p.pregunta}</strong><br>
-                    Tu respuesta: <span style="color:${respuesta === correcta ? '#7CFF7C' : '#FF6B6B'}">${respuesta ?? "No respondida"}</span><br>
-                    Correcta: <strong style="color:#7CFF7C">${correcta}</strong>
-                </li>
-                <br>
+                    <strong>${i + 1}.</strong>  
+                    Tu respuesta: ${marcada ?? "No respondida"}<br>
+                    Correcta: <strong>${correcta}</strong>  
+                    ${marcada === correcta ? "✅" : "❌"}
+                </li><br>
             `;
         });
 
-        html += "</ul>";
+        const nota = (aciertos / preguntas.length) * 10;
 
-        const nota = ((aciertos / preguntas.length) * 10).toFixed(2);
-
-        html += `<h2 style="text-align:center;">Nota final: <span style="color:#00eaff;">${nota} / 10</span></h2>`;
+        html += `</ul><h3>Puntuación final: <strong>${nota.toFixed(2)}/10</strong></h3>`;
 
         resultsDiv.innerHTML = html;
         resultsDiv.style.display = "block";
