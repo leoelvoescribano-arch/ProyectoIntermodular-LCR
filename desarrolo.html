@@ -94,17 +94,48 @@ Código Ejecutable: Es el archivo final que la computadora puede ejecutar direct
 
 </p>
 <h2>7. Proceso de Obtención de Código Ejecutable a partir de Código Fuente</h2>
-<p>
-    1.	Escritura del Código Fuente: El programador escribe el código utilizando un editor de texto o un IDE.
-2.	Compilación: El compilador convierte el código fuente en código objeto, verificando errores de sintaxis.
-3.	Enlazado (Linking): El enlazador combina el código objeto con las bibliotecas necesarias para generar el archivo ejecutable final.
-4.	Generación del Archivo Ejecutable: Resultado → .exe, .out, etc.
-5.	Depuración y Optimización: Uso de depuradores (ej. GDB) y optimizadores.
-El caso de Java Java combina compilación e interpretación:
-•	Primero el código fuente se compila a bytecode (intermedio).
-•	Luego, este bytecode es interpretado (o compilado JIT) por la máquina virtual de Java (JVM).
-Herramientas Editores, compiladores/intérpretes, enlazadores → normalmente integrados en IDEs (Eclipse, Visual Studio, IntelliJ…).
-</p>
+<div class="modelo-cascada">
+
+  <div class="bloque">
+    <h3>1. Escritura del Código Fuente</h3>
+    <p>El programador escribe el código utilizando un editor de texto o un IDE.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>2. Compilación</h3>
+    <p>El compilador convierte el código fuente en código objeto, verificando errores de sintaxis.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>3. Enlazado (Linking)</h3>
+    <p>El enlazador combina el código objeto con las bibliotecas necesarias para generar el archivo ejecutable final.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>4. Generación del Archivo Ejecutable</h3>
+    <p>Resultado → .exe, .out, etc.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>5. Depuración y Optimización</h3>
+    <p>Uso de depuradores (ej. GDB) y optimizadores.</p>
+  </div>
+
+  <h3>El caso de Java</h3>
+  <p>
+    Java combina compilación e interpretación:<br>
+    • Primero el código fuente se compila a bytecode.<br>
+    • Luego, este bytecode es interpretado o compilado JIT por la JVM.
+  </p>
+
+  <h3>Herramientas</h3>
+  <p>
+    Editores, compiladores, intérpretes y enlazadores, normalmente integrados en IDEs como Eclipse, Visual Studio, IntelliJ.
+  </p>
+
+</div>
+</section>
+
 <h2>8. Tipos de Traductores</h2>
 <p>
     1.	Compiladores
@@ -117,33 +148,64 @@ Herramientas Editores, compiladores/intérpretes, enlazadores → normalmente in
 	Más lentos, pero permiten ejecución inmediata y mayor portabilidad.
 </p>
 <h2>9. Clasificación de los lenguajes de programación</h2>
-<p>
-    Según cercanía al lenguaje máquina:
-•	Lenguajes de bajo nivel (lenguaje máquina): binario, muy difíciles.
-•	Lenguajes intermedios (ensambladores): códigos simbólicos, 1 instrucción ensamblador = 1 instrucción máquina.
-•	Lenguajes de alto nivel: Java, C++, Python, JavaScript… Más fáciles y productivos.
-Ventajas de los lenguajes de alto nivel
-•	Más fáciles de aprender y usar.
-•	Permiten crear programas más complejos.
-•	Mayor productividad.
-Desventajas
-•	Necesitan traducción.
-•	Mayor consumo de recursos.
-•	Menor eficiencia que bajo nivel.
-Características principales de los lenguajes
-•	Precisos
-•	Tienen sintaxis (reglas gramaticales)
-•	Muy diversos
-Elementos básicos de un lenguaje de programación
-•	Identificadores
-•	Constantes
-•	Operadores
-•	Instrucciones
-•	Comentarios
-Paradigmas de programación
-•	Programación estructurada
-•	Programación orientada a objetos (POO) ← dominante hoy
-</p>
+<div class="modelo-cascada">
+  <div class="bloque">
+    <h3>Según cercanía al lenguaje máquina</h3>
+    <p>
+      • <strong>Lenguajes de bajo nivel (lenguaje máquina):</strong> binario, muy difíciles.<br>
+      • <strong>Lenguajes intermedios (ensambladores):</strong> códigos simbólicos, 1 instrucción ensamblador = 1 instrucción máquina.<br>
+      • <strong>Lenguajes de alto nivel:</strong> Java, C++, Python, JavaScript… más fáciles y productivos.
+    </p>
+  </div>
+
+  <div class="bloque">
+    <h3>Ventajas de los lenguajes de alto nivel</h3>
+    <p>
+      • Más fáciles de aprender y usar.<br>
+      • Permiten crear programas más complejos.<br>
+      • Mayor productividad.
+    </p>
+  </div>
+
+  <div class="bloque">
+    <h3>Desventajas</h3>
+    <p>
+      • Necesitan traducción.<br>
+      • Mayor consumo de recursos.<br>
+      • Menor eficiencia que bajo nivel.
+    </p>
+  </div>
+
+  <div class="bloque">
+    <h3>Características principales de los lenguajes</h3>
+    <p>
+      • Precisos.<br>
+      • Tienen sintaxis (reglas gramaticales).<br>
+      • Muy diversos.
+    </p>
+  </div>
+
+  <div class="bloque">
+    <h3>Elementos básicos de un lenguaje de programación</h3>
+    <p>
+      • Identificadores.<br>
+      • Constantes.<br>
+      • Operadores.<br>
+      • Instrucciones.<br>
+      • Comentarios.
+    </p>
+  </div>
+
+  <div class="bloque">
+    <h3>Paradigmas de programación</h3>
+    <p>
+      • Programación estructurada.<br>
+      • Programación orientada a objetos (POO) — dominante hoy.
+    </p>
+  </div>
+
+</div>
+
 <h2>10. Razón de ser de la Ingeniería del Software</h2>
 <p>
     Surgió como respuesta a la creciente complejidad y a la “crisis del software”. Objetivos básicos
