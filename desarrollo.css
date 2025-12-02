@@ -297,3 +297,18 @@ header {
     border-radius: 8px;
     border: 1px solid #a45a8d;
 }
+.clasificacion-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;   
+    color: #fff;
+}
+
+.lista-puntos {
+    list-style-type: disc;  
+    padding-left: 40px;      
+}
+
+.lista-puntos li {
+    margin-bottom: 10px;      
+    line-height: 1.5;         
