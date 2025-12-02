@@ -1,64 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Cuestionario sobre Software y Hardware</title>
-<link rel="stylesheet" href="cuestionario.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Completo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<a class="back" href="index.html">← Volver</a>
+<div class="container">
 
-<header>
-    <h1>Cuestionario sobre Software y Hardware</h1>
+    <h1>Examen de Ciclo de Vida, RUP y Ágil</h1>
 
-    <nav>
-        <a href="desarrolo.html" class="nav-link">Desarrollo</a>
-        <a href="ides.html" class="nav-link">IDES</a>
-        <a href="sector.html" class="nav-link">Sector Productivo</a>
-        <a href="index.html" class="nav-link">Inicio</a>
-    </nav>
-</header>
+    <form id="quiz-form">
 
-<div id="quiz">
+        <!-- LAS 12 PREGUNTAS (todas ocultas al inicio) -->
 
-    <!-- REGISTRO -->
-    <div id="registration" class="registration">
-        <h2>Registro</h2>
-        <form id="registration-form">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" class="input-field" required>
+        <!-- P1 -->
+        <div class="question">
+            <h2>1. ¿Cuál es la principal desventaja del modelo en cascada?</h2>
+            <label><input type="radio" name="p1" value="A"> A) Es muy costoso implementarlo</label>
+            <label><input type="radio" name="p1" value="B"> B) No permite volver atrás ni cambios de requisitos</label>
+            <label><input type="radio" name="p1" value="C"> C) Requiere muchos programadores</label>
+            <label><input type="radio" name="p1" value="D"> D) No tiene fases definidas</label>
+        </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" class="input-field" required>
+        <!-- P2 -->
+        <div class="question">
+            <h2>2. En el modelo espiral, ¿qué se hace en cada vuelta?</h2>
+            <label><input type="radio" name="p2" value="A"> A) Análisis → Diseño → Codificación → Pruebas</label>
+            <label><input type="radio" name="p2" value="B"> B) Identificar riesgos → Prototipo → Evaluación → Planificación</label>
+            <label><input type="radio" name="p2" value="C"> C) Planificación → Ejecución → Control → Cierre</label>
+            <label><input type="radio" name="p2" value="D"> D) Requisitos → Prototipo → Implementación → Mantenimiento</label>
+        </div>
 
-            <label for="birthdate">Fecha de nacimiento:</label>
-            <input type="date" id="birthdate" class="input-field" required>
+        <!-- P3 -->
+        <div class="question">
+            <h2>3. ¿Qué modelo entrega versiones funcionales desde temprano?</h2>
+            <label><input type="radio" name="p3" value="A"> A) Modelo en cascada</label>
+            <label><input type="radio" name="p3" value="B"> B) Modelo incremental y modelo espiral</label>
+            <label><input type="radio" name="p3" value="C"> C) Modelo en V</label>
+            <label><input type="radio" name="p3" value="D"> D) Modelo de prototipado</label>
+        </div>
 
-            <button type="submit" class="btn-enviar">Registrarse</button>
-        </form>
-    </div>
+        <!-- P4 -->
+        <div class="question">
+            <h2>4. Mejor modelo cuando el cliente no tiene claros los requisitos:</h2>
+            <label><input type="radio" name="p4" value="A"> A) Modelo en cascada</label>
+            <label><input type="radio" name="p4" value="B"> B) Modelo incremental</label>
+            <label><input type="radio" name="p4" value="C"> C) Modelo evolutivo (prototipado)</label>
+            <label><input type="radio" name="p4" value="D"> D) Modelo espiral</label>
+        </div>
 
-    <!-- BARRA DE PROGRESO -->
-    <div id="progress-container" style="display:none;">
-        <div id="progress-bar"></div>
-    </div>
+        <!-- P5 -->
+        <div class="question">
+            <h2>5. ¿Qué modelo usa el riesgo como eje principal?</h2>
+            <label><input type="radio" name="p5" value="A"> A) Modelo en cascada</label>
+            <label><input type="radio" name="p5" value="B"> B) Modelo incremental</label>
+            <label><input type="radio" name="p5" value="C"> C) Modelo en V</label>
+            <label><input type="radio" name="p5" value="D"> D) Modelo espiral</label>
+        </div>
 
-    <!-- CONTENEDOR PARA LAS PREGUNTAS -->
-    <div id="question-container"></div>
+        <!-- P6 -->
+        <div class="question">
+            <h2>6. ¿Cuál es la característica principal del modelo incremental?</h2>
+            <label><input type="radio" name="p6" value="A"> A) Se completa todo antes de entregar</label>
+            <label><input type="radio" name="p6" value="B"> B) Producto construido y entregado por partes</label>
+            <label><input type="radio" name="p6" value="C"> C) Se enfoca en riesgos</label>
+            <label><input type="radio" name="p6" value="D"> D) Requisitos totalmente definidos</label>
+        </div>
 
-    <!-- BOTONES -->
-    <div id="buttons" style="display:none; text-align:center;">
-        <button id="btn-prev" class="btn-enviar" style="display:none;">Anterior</button>
-        <button id="btn-next" class="btn-enviar">Siguiente</button>
-        <button id="btn-finish" class="btn-enviar" style="display:none;">Finalizar</button>
-    </div>
+        <!-- P7 -->
+        <div class="question">
+            <h2>7. ¿Cuándo se detectan la mayoría de errores en cascada?</h2>
+            <label><input type="radio" name="p7" value="A"> A) Análisis de requisitos</label>
+            <label><input type="radio" name="p7" value="B"> B) Diseño</label>
+            <label><input type="radio" name="p7" value="C"> C) Codificación</label>
+            <label><input type="radio" name="p7" value="D"> D) Verificación/pruebas (muy tarde)</label>
+        </div>
 
-    <!-- RESULTADOS -->
-    <div id="results" class="content" style="display:none;"></div>
+        <!-- P8 -->
+        <div class="question">
+            <h2>8. Modelo que combina prototipado y gestión de riesgos:</h2>
+            <label><input type="radio" name="p8" value="A"> A) Cascada</label>
+            <label><input type="radio" name="p8" value="B"> B) Incremental</label>
+            <label><input type="radio" name="p8" value="C"> C) Modelo en V</label>
+            <label><input type="radio" name="p8" value="D"> D) Espiral</label>
+        </div>
+
+        <!-- P9 -->
+        <div class="question">
+            <h2>9. ¿En qué fase de RUP se construye la mayor parte del sistema?</h2>
+            <label><input type="radio" name="p9" value="A"> A) Inicio</label>
+            <label><input type="radio" name="p9" value="B"> B) Elaboración</label>
+            <label><input type="radio" name="p9" value="C"> C) Construcción</label>
+            <label><input type="radio" name="p9" value="D"> D) Transición</label>
+        </div>
+
+        <!-- P10 -->
+        <div class="question">
+            <h2>10. En Scrum, ¿quién prioriza el Product Backlog?</h2>
+            <label><input type="radio" name="p10" value="A"> A) Scrum Master</label>
+            <label><input type="radio" name="p10" value="B"> B) Product Owner</label>
+            <label><input type="radio" name="p10" value="C"> C) Development Team</label>
+            <label><input type="radio" name="p10" value="D"> D) Stakeholders</label>
+        </div>
+
+        <!-- P11 -->
+        <div class="question">
+            <h2>11. ¿Qué opción NO es un principio del Manifiesto Ágil?</h2>
+            <label><input type="radio" name="p11" value="A"> A) Individuos e interacciones…</label>
+            <label><input type="radio" name="p11" value="B"> B) Software funcionando…</label>
+            <label><input type="radio" name="p11" value="C"> C) Colaboración con el cliente…</label>
+            <label><input type="radio" name="p11" value="D"> D) Seguir un plan es más importante…</label>
+        </div>
+
+        <!-- P12 -->
+        <div class="question">
+            <h2>12. RUP se caracteriza por ser:</h2>
+            <label><input type="radio" name="p12" value="A"> A) Iterativo e incremental</label>
+            <label><input type="radio" name="p12" value="B"> B) Predictivo y secuencial</label>
+            <label><input type="radio" name="p12" value="C"> C) En cascada</label>
+            <label><input type="radio" name="p12" value="D"> D) Rígido y no adaptable</label>
+        </div>
+
+        <button type="button" id="next-btn">Siguiente</button>
+        <button type="submit" id="finish-btn" style="display:none;">Finalizar</button>
+
+    </form>
 
 </div>
 
-<script src="cuestionario.js"></script>
+<script src="quiz.js"></script>
 </body>
 </html>
