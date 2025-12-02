@@ -22,48 +22,92 @@
 </header>
 <body>
 
-<h2>1. ¿Qué es el Software?</h2>
-<p>
-El software es la parte intangible del ordenador, es decir, todo aquello que no puedes tocar físicamente, pero que hace que el ordenador (hardware) funcione y realice tareas útiles.
-En palabras más concretas:
-Definición sencilla (estilo RAE):
-El software es el conjunto de programas, instrucciones y datos que le indican al ordenador qué tareas debe realizar.
-Definición más completa (estilo Pressman, que aparece en tu presentación):
-El software no solo son los programas ejecutables, sino que incluye tres elementos:
+<div class="que-es-software">
+    <h2> 1. ¿Qué es el Software?</h2>
 
-Instrucciones (los propios programas o aplicaciones).
-Estructuras de datos (la forma en que se organiza la información que usa el programa).
-Documentación (manuales, guías, comentarios del código, etc.) que explica cómo funciona y cómo usarlo.
-</p>
+    <p>
+        El software es la parte intangible del ordenador, es decir, todo aquello que no puedes tocar físicamente,
+        pero que hace que el ordenador (hardware) funcione y realice tareas útiles.
+    </p>
+
+<h3 class="subtitulo">Definición sencilla (estilo RAE):</h3>
+    <p>
+        El software es el conjunto de programas, instrucciones y datos que le indican al ordenador qué tareas debe realizar.
+    </p>
+
+<h3 class="subtitulo">Definición más completa (estilo Pressman):</h3>
+    <p>
+        El software no solo son los programas ejecutables, sino que incluye tres elementos:
+    </p>
+
+    <ul class="lista-puntos">
+        <li><strong>Instrucciones:</strong> los propios programas o aplicaciones.</li>
+        <li><strong>Estructuras de datos:</strong> la forma en que se organiza la información que usa el programa.</li>
+        <li><strong>Documentación:</strong> manuales, guías, comentarios del código, etc., que explican cómo funciona y cómo usarlo.</li>
+    </ul>
+</div>
 <div class="img">
         <img src="img/Foto 1 software.jpg" >
 </div>
-<h2>2. Tipos de software</h2>
-<p>
-	Software de sistemas: Windows, macOS, Linux… Infraestructura con él.
-	Software de programación: herramientas que usan los programadores (editores, compiladores…).
-	Software de aplicación: programas cotidianos (navegadores, procesadores de texto, videojuegos…).
-</p>
-<h2>3. ¿Como funciona el ordenador?</h2>
-<p>
-    El ordenador tiene tres partes principales:
-1.	Unidad Central de Proceso (CPU)
-	Ejecuta las instrucciones de los programas, traduciendo operaciones complejas en operaciones aritméticas y lógicas básicas.
-	Unidad Aritmético-Lógica (ALU): ejecuta operaciones aritméticas y lógicas.
-	Unidad de Control (UC): recoge y ordena la ejecución de instrucciones.
-	Registros: almacenamiento interno de la CPU.
-2.	Memoria Principal (RAM)
-	Contiene las instrucciones del programa y los datos.
-	Es una memoria volátil que se borra al apagar el ordenador.
-3.	Unidad de Entrada/Salida
-	Periféricos de Entrada: teclado, ratón.
-	Periféricos de Salida: pantalla, impresora.
-	Periféricos de Entrada/Salida: módem, tarjeta de red, dispositivos de almacenamiento.
+<div class="tipos-software">
+    <h2> 2. Tipos de software</h2>
 
-</p>
-<h2>4. Máquinas Virtuales: Concepto y Efectividad</h2>
-<p>
-    ¿En qué consiste la máquina virtual? Una máquina virtual (VM) es un software que simula un sistema de computación integral, permitiendo el funcionamiento de un sistema operativo y programas como si estuvieran integrados en una computadora física independiente. Es básicamente un ordenador que se inserta en otro.
+    <ul class="lista-puntos">
+        <li>
+            <strong>Software de sistemas:</strong>  
+            Windows, macOS, Linux…  
+            Proporciona la infraestructura para que funcione el hardware y el resto del software.
+        </li>
+
+        <li>
+            <strong>Software de programación:</strong>  
+            Herramientas que usan los programadores como editores, compiladores, intérpretes, depuradores, etc.
+        </li>
+
+        <li>
+            <strong>Software de aplicación:</strong>  
+            Programas de uso cotidiano como navegadores, procesadores de texto, videojuegos, reproductores multimedia, etc.
+        </li>
+    </ul>
+</div>
+<h2>3. ¿Como funciona el ordenador?</h2>
+<div class="partes-ordenador">
+    <h3 class="subtitulo">El ordenador tiene tres partes principales: </h3>
+
+    <ol class="lista-numerada">
+
+        <li>
+            <strong>Unidad Central de Proceso (CPU):</strong><br>
+            Ejecuta las instrucciones de los programas, traduciendo operaciones complejas en operaciones 
+            aritméticas y lógicas básicas.
+            
+            <ul class="sublista">
+                <li><strong>Unidad Aritmético-Lógica (ALU):</strong> ejecuta operaciones aritméticas y lógicas.</li>
+                <li><strong>Unidad de Control (UC):</strong> recoge y ordena la ejecución de instrucciones.</li>
+                <li><strong>Registros:</strong> almacenamiento interno de la CPU.</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Memoria Principal (RAM):</strong><br>
+            Contiene las instrucciones del programa y los datos.  
+            Es una memoria volátil que se borra al apagar el ordenador.
+        </li>
+
+        <li>
+            <strong>Unidad de Entrada/Salida:</strong><br>
+            <ul class="sublista">
+                <li><strong>Periféricos de Entrada:</strong> teclado, ratón.</li>
+                <li><strong>Periféricos de Salida:</strong> pantalla, impresora.</li>
+                <li><strong>Periféricos de Entrada/Salida:</strong> módem, tarjeta de red, dispositivos de almacenamiento.</li>
+            </ul>
+        </li>
+
+    </ol>
+</div>
+<h2> 4. Máquinas Virtuales: Concepto y Efectividad</h2>
+<h3 class="subtitulo">¿En qué consiste la máquina virtual? </h3>
+    <p>Una máquina virtual (VM) es un software que simula un sistema de computación integral, permitiendo el funcionamiento de un sistema operativo y programas como si estuvieran integrados en una computadora física independiente. Es básicamente un ordenador que se inserta en otro.
 </p>
 <h3 class="subtitulo">4.1. Máquinas Virtuales de Sistema</h3>
  <p>Las aplicaciones de virtualización emulan un ordenador, permitiendo instalar sistemas operativos con componentes propios. La experiencia es similar a la de una máquina real. Ejemplos como VMware Workstation y VirtualBox son útiles para tener varios sistemas en el mismo equipo. Su desventaja es el alto consumo de recursos del ordenador físico, especialmente memoria RAM y espacio en disco.
@@ -72,13 +116,33 @@ Documentación (manuales, guías, comentarios del código, etc.) que explica có
 <p>
     Una máquina virtual ejecuta un proceso específico dentro de un sistema operativo, activándose al inicio del proceso y deteniéndose al finalizar. Proporciona un entorno de ejecución independiente del hardware y del sistema operativo, permitiendo que los programas se ejecuten uniformemente en distintas plataformas. Un ejemplo notable es la Máquina Virtual de Java (JVM).
 </p>
-<h3 class="subtitulo">Proceso para Ejecutar un Programa en Java</h3>
 
-<p>
- 1.	Creación del código fuente: El desarrollador escribe el programa en lenguaje Java utilizando un editor de texto (.java).
- 2.	Compilación: El código fuente se compila utilizando el compilador javac, produciendo un archivo con extensión .class si no se detectan errores. Este archivo contiene un lenguaje intermedio llamado bytecode, el cual es independiente de la plataforma.
- 3.	Ejecución: La Máquina Virtual de Java traduce el archivo .class a código binario para su ejecución. Como la JVM está disponible en múltiples sistemas operativos (Windows, Linux, macOS, etc.), los programas pueden ejecutarse en diversas plataformas sin modificaciones.
-</p>
+<div class="proceso-java">
+    <h3 class="subtitulo">Proceso para Ejecutar un Programa en Java</h3>
+
+    <ol class="lista-numerada">
+        <li>
+            <strong>Creación del código fuente:</strong><br>
+            El desarrollador escribe el programa en lenguaje Java utilizando un editor de texto o un IDE. 
+            El archivo resultante tiene extensión <strong>.java</strong>.
+        </li>
+
+        <li>
+            <strong>Compilación:</strong><br>
+            El código fuente se compila utilizando el compilador <strong>javac</strong>.  
+            Si no hay errores, se genera un archivo <strong>.class</strong> que contiene bytecode, 
+            un lenguaje intermedio independiente de la plataforma.
+        </li>
+
+        <li>
+            <strong>Ejecución:</strong><br>
+            La <strong>Máquina Virtual de Java (JVM)</strong> traduce o interpreta el bytecode a código binario.  
+            Como la JVM existe para Windows, Linux, macOS, etc., el mismo programa puede ejecutarse en múltiples plataformas sin modificaciones.
+        </li>
+    </ol>
+</div>
+
+
 <h2>5. Lenguajes de Programación</h2>
 <p>
     Un lenguaje de programación es un conjunto estructurado de símbolos, palabras y reglas gramaticales que permite a los programadores escribir instrucciones específicas para que una computadora ejecute tareas. Es una herramienta que actúa como puente entre el ser humano y la máquina, permitiendo expresar procesos lógicos de manera comprensible tanto para el programador como para el sistema informático.
@@ -86,12 +150,10 @@ Documentación (manuales, guías, comentarios del código, etc.) que explica có
 <div class="img">
         <img src="img/lenguaje progra.jpg" >
 </div>
-<h2>6. Conceptos de Código</h2>
-<p>
-Código Fuente: El código fuente es el conjunto de instrucciones que los programadores escriben en un lenguaje de programación para hacer que un programa o aplicación funcione. Es como el “guión” que le dice a la computadora qué hacer. Este código se puede modificar y mejorar.
-Código Objeto: Es el resultado de convertir el código fuente a un formato que la computadora puede entender, pero aún no es completamente ejecutable. Es un archivo intermedio que contiene instrucciones en lenguaje de bajo nivel, generalmente en código binario, pero necesita pasar por un proceso de enlace (linking).
-Código Ejecutable: Es el archivo final que la computadora puede ejecutar directamente. Es el resultado de enlazar todos los archivos de código objeto.
+<div class="codigos">
+    <h2>6. Conceptos de Código</h2>
 
+<<<<<<< HEAD
 </p>
 <h2>7. Proceso de Obtención de Código Ejecutable a partir de Código Fuente</h2>
 <div class="modelo-cascada">
@@ -215,6 +277,122 @@ Código Ejecutable: Es el archivo final que la computadora puede ejecutar direct
 4.	Incrementar la mantenibilidad
 5.	Fomentar la reutilización
 </p>
+=======
+    <ul class="lista-puntos">
+        <li>
+            <strong>Código Fuente:</strong>  
+            El conjunto de instrucciones que los programadores escriben en un lenguaje de programación 
+            para hacer que un programa o aplicación funcione.  
+            Es como el “guión” que le dice a la computadora qué hacer.  
+            Este código se puede modificar y mejorar.
+        </li>
+
+        <li>
+            <strong>Código Objeto:</strong>  
+            Es el resultado de convertir el código fuente a un formato que la computadora puede entender, 
+            pero aún no es completamente ejecutable.  
+            Es un archivo intermedio en lenguaje de bajo nivel (generalmente binario)  
+            y necesita pasar por un proceso de enlace (linking).
+        </li>
+
+        <li>
+            <strong>Código Ejecutable:</strong>  
+            Es el archivo final que la computadora puede ejecutar directamente.  
+            Es el resultado de enlazar todos los archivos de código objeto.
+        </li>
+    </ul>
+</div>
+<div class="codigo-ejecutable">
+    <h2>7. Proceso de Obtención de Código Ejecutable a partir de Código Fuente</h2>
+
+    <ol class="lista-numerada">
+        <li>
+            <strong>Escritura del Código Fuente:</strong>  
+            El programador escribe el código utilizando un editor de texto o un IDE.
+        </li>
+
+        <li>
+            <strong>Compilación:</strong>  
+            El compilador convierte el código fuente en código objeto, verificando errores de sintaxis.
+        </li>
+
+        <li>
+            <strong>Enlazado (Linking):</strong>  
+            El enlazador combina el código objeto con las bibliotecas necesarias para generar el archivo ejecutable final.
+        </li>
+
+        <li>
+            <strong>Generación del Archivo Ejecutable:</strong>  
+            Resultado → .exe, .out, etc.
+        </li>
+
+        <li>
+            <strong>Depuración y Optimización:</strong>  
+            Uso de depuradores (ej. GDB) y optimizadores.
+        </li>
+    </ol>
+
+<h3 class="subtitulo">El caso de Java</h3>
+
+    <ul class="lista-puntos">
+        <li>Java combina compilación e interpretación.</li>
+        <li>Primero el código fuente se compila a bytecode (intermedio).</li>
+        <li>Luego, este bytecode es interpretado o compilado JIT por la JVM.</li>
+    </ul>
+
+<h3 class="subtitulo">Herramientas</h3>
+
+    <ul class="lista-puntos">
+        <li>Editores</li>
+        <li>Compiladores / Intérpretes</li>
+        <li>Enlazadores</li>
+        <li>Normalmente integrados en IDEs como Eclipse, Visual Studio, IntelliJ…</li>
+    </ul>
+</div>
+<div class="traductores">
+    <h2>8. Tipos de Traductores</h2>
+
+    <ol class="lista-numerada">
+        <li>
+            <strong>Compiladores</strong>:  
+            Traducen todo el código fuente de una vez. Detectan errores de sintaxis.  
+            Generan código objeto (puede necesitar ensamblado y enlazado).  
+            El ejecutable resultante se ejecuta sin volver a compilar.
+        </li>
+
+        <li>
+            <strong>Intérpretes</strong>:  
+            Traducen y ejecutan línea por línea. Más lentos, pero permiten ejecución inmediata  
+            y mayor portabilidad.
+        </li>
+    </ol>
+</div>
+<div class="clasificacion-container">
+    <h1> 9. Clasificación de los lenguajes de programación</h1>
+
+    <ul class="lista-puntos">
+        <li>Lenguajes de bajo nivel (lenguaje máquina): binario, muy difíciles.</li>
+        <li>Lenguajes intermedios (ensambladores): códigos simbólicos, 1 instrucción ensamblador = 1 instrucción máquina.</li>
+        <li>Lenguajes de alto nivel: Java, C++, Python, JavaScript...</li>
+        <li>Más fáciles y productivos.</li>
+        <li>Ventajas: más fáciles de aprender y usar, permiten crear programas más complejos, mayor productividad.</li>
+        <li>Desventajas: necesitan traducción, mayor consumo de recursos, menor eficiencia.</li>
+        <li>Características: precisos, con sintaxis (reglas gramaticales).</li>
+        <li>Elementos básicos: identificadores, constantes, operadores, instrucciones, comentarios.</li>
+        <li>Paradigmas: programación estructurada, programación orientada a objetos (POO).</li>
+    </ul>
+</div>
+<div class="razon-container">
+    <h1>10. Razón de ser de la Ingeniería del Software</h1>
+    <p>Surgió como respuesta a la creciente complejidad y a la “crisis del software”. Objetivos básicos</p>
+
+    <div class="item">1. Mejora la calidad del software</div>
+    <div class="item">2. Mejorar el proceso de desarrollo</div>
+    <div class="item">3. Gestión de la complejidad</div>
+    <div class="item">4. Incrementar la mantenibilidad</div>
+    <div class="item">5. Fomentar la reutilización</div>
+</div>
+>>>>>>> 3f447e01c964a3938c1979434517e6b3f76eeda3
 <h2>11. Fases del desarrollo de una aplicación informática</h2>
 <p>
     El desarrollo de una aplicación informática sigue un conjunto de etapas organizadas para asegurar que el producto final funcione correctamente y cumpla con las necesidades del usuario. Estas fases forman parte del ciclo de vida del software.
@@ -284,95 +462,147 @@ Largo tiempo de espera: Las pruebas se realizan al final del desarrollo.
 </p>
 <h2>13. Otros modelos de ciclo de vida</h2>
 <h3 class="subtitulo">Modelo Incremental</h3>
-<p>
-Idea principal: Se desarrolla el software en partes o incrementos, cada uno con funcionalidades completas.
+<p><strong>Idea principal:</strong> Se desarrolla el software en partes o incrementos, cada uno con funcionalidades completas.</p>
 
-Cómo funciona:
-Se construye un núcleo básico del sistema.
-Se agregan incrementos que amplían las funcionalidades.
-Cada incremento se prueba y se entrega al usuario.
+<h3 class="subtitulo">Cómo funciona</h3>
+<ul>
+    <li>Se construye un núcleo básico del sistema.</li>
+    <li>Se agregan incrementos que amplían las funcionalidades.</li>
+    <li>Cada incremento se prueba y se entrega al usuario.</li>
+</ul>
 
-Ventajas:
-Permite entregar funcionalidades antes de terminar todo el proyecto.
-Facilita cambios y ajustes en incrementos posteriores.
+<h3 class="subtitulo">Ventajas</h3>
+<ul>
+    <li>Permite entregar funcionalidades antes de terminar todo el proyecto.</li>
+    <li>Facilita cambios y ajustes en incrementos posteriores.</li>
+</ul>
 
-Desventajas:
-Puede requerir más planificación y gestión de integración.
-La arquitectura inicial debe estar bien diseñada para soportar los incrementos.
-</p>
+<h3 class="subtitulo">Desventajas</h3>
+<ul>
+    <li>Puede requerir más planificación y gestión de integración.</li>
+    <li>La arquitectura inicial debe estar bien diseñada para soportar los incrementos.</li>
+</ul>
 <h3 class="subtitulo">Modelo en Espiral</h3>
-<p>
-Idea principal: Combina desarrollo iterativo con un enfoque en la gestión de riesgos.
+<p><strong>Idea principal:</strong> Combina desarrollo iterativo con un enfoque en la gestión de riesgos.</p>
 
-Cómo funciona:
-El desarrollo se realiza en ciclos (espirales).
-Cada ciclo pasa por cuatro fases: planificación, análisis de riesgos, desarrollo y evaluación del cliente.
+<h3 class="subtitulo">Cómo funciona</h3>
+<p>El desarrollo se realiza en ciclos (espirales). Cada ciclo pasa por cuatro fases:</p>
+<ul>
+    <li>Planificación</li>
+    <li>Análisis de riesgos</li>
+    <li>Desarrollo</li>
+    <li>Evaluación del cliente</li>
+</ul>
 
-Ventajas:
-Ideal para proyectos grandes y complejos.
-Permite identificar y mitigar riesgos desde el inicio.
-Facilita cambios en cualquier etapa.
+<h3 class="subtitulo">Ventajas</h3>
+<ul>
+    <li>Ideal para proyectos grandes y complejos.</li>
+    <li>Permite identificar y mitigar riesgos desde el inicio.</li>
+    <li>Facilita cambios en cualquier etapa.</li>
+</ul>
 
-Desventajas:
-Más complejo y costoso que modelos lineales.
-Requiere personal capacitado en gestión de riesgos.
-</p>
+<h3 class="subtitulo">Desventajas</h3>
+<ul>
+    <li>Más complejo y costoso que modelos lineales.</li>
+    <li>Requiere personal capacitado en gestión de riesgos.</li>
+</ul>
 <h3 class="subtitulo">Proceso Unificado de Rational (RUP)</h3>
-<p>
-Idea principal: Modelo iterativo con cuatro fases principales que cubren todo el ciclo de vida del software.
+<p><strong>Idea principal:</strong> Modelo iterativo con cuatro fases principales que cubren todo el ciclo de vida del software.</p>
 
-Fases del RUP:
-Inicio (Inception): Definir objetivos y viabilidad del proyecto.
-Elaboración (Elaboration): Analizar riesgos, requisitos y arquitectura.
-Construcción (Construction): Programar, integrar y probar el software.
-Transición (Transition): Entregar el software al usuario y entrenar al personal.
+<h3 class="subtitulo">Fases del RUP</h3>
+<ul>
+    <li><strong>Inicio (Inception):</strong> Definir objetivos y viabilidad del proyecto.</li>
+    <li><strong>Elaboración (Elaboration):</strong> Analizar riesgos, requisitos y arquitectura.</li>
+    <li><strong>Construcción (Construction):</strong> Programar, integrar y probar el software.</li>
+    <li><strong>Transición (Transition):</strong> Entregar el software al usuario y entrenar al personal.</li>
+</ul>
 
-Ventajas:
-Flexible y adaptable a cambios.
-Permite iteraciones para mejorar el producto continuamente.
-Buen manejo de riesgos y calidad.
+<h3 class="subtitulo">Ventajas</h3>
+<ul>
+    <li>Flexible y adaptable a cambios.</li>
+    <li>Permite iteraciones para mejorar el producto continuamente.</li>
+    <li>Buen manejo de riesgos y calidad.</li>
+</ul>
 
-Desventajas:
-Puede ser costoso y complejo de implementar.
-Requiere experiencia en metodologías iterativas.
-</p>
-<h2>14. Metodologías ágiles (principios)</h2>
-<p>
-    •	Individuos e interacciones > procesos y herramientas
-•	Software funcionando > documentación exhaustiva
-•	Colaboración con el cliente > negociación contractual
-•	Respuesta al cambio > seguir un plan rígido
-Programación Extrema (XP) – Kent Beck
-•	Simplicidad, comunicación, retroalimentación, valentía, respeto
-•	Pruebas continuas, programación en pareja, refactorización…
-Scrum – Jeff Sutherland
-•	Sprints (ciclos cortos)
-•	Pilares: Transparencia, Inspección, Adaptación
-•	Reuniones: planificación, daily, review, retrospectiva
-</p>
+<h3 class="subtitulo">Desventajas</h3>
+<ul>
+    <li>Puede ser costoso y complejo de implementar.</li>
+    <li>Requiere experiencia en metodologías iterativas.</li>
+</ul>
+<h2> 14. Metodolog</h2>ías ágiles (principios)</h2>
+
+<ul>
+    <li><strong>Individuos e interacciones</strong> &gt; procesos y herramientas</li>
+    <li><strong>Software funcionando</strong> &gt; documentación exhaustiva</li>
+    <li><strong>Colaboración con el cliente</strong> &gt; negociación contractual</li>
+    <li><strong>Respuesta al cambio</strong> &gt; seguir un plan rígido</li>
+</ul>
+
+<h3 class="subtitulo">Programación Extrema (XP) – Kent Beck</h3>
+<ul>
+    <li>Simplicidad, comunicación, retroalimentación, valentía, respeto</li>
+    <li>Pruebas continuas</li>
+    <li>Programación en pareja</li>
+    <li>Refactorización</li>
+</ul>
+
+<h3 class="subtitulo">Scrum – Jeff Sutherland</h3>
+<ul>
+    <li><strong>Sprints:</strong> ciclos de trabajo cortos y repetitivos</li>
+    <li><strong>Pilares:</strong> Transparencia, Inspección, Adaptación</li>
+    <li><strong>Reuniones:</strong>
+        <ul>
+            <li>Planificación (Sprint Planning)</li>
+            <li>Daily Scrum</li>
+            <li>Review</li>
+            <li>Retrospectiva</li>
+        </ul>
+    </li>
+</ul>
 <h2>15. Roles / Perfiles en un proyecto de software</h2>
-<P>
-•	Jefe de proyecto: planificación, seguimiento, control y cierre. Máximo responsable.
-•	Expertos del dominio: conocen la realidad del negocio/problema.
-•	Analista: comunica con expertos del dominio y define requisitos funcionales.
-•	Arquitecto: define la arquitectura global del sistema (cómo se divide en componentes).
-•	Diseñador (o analista técnico/orgánico): diseña en detalle los componentes.
-•	Programador: escribe el código fuente.
-•	Probador (tester): ejecuta pruebas unitarias, integración, sistema… Garantiza calidad.
-•	Encargado de la implantación: empaquetado, instalación, gestión de configuración y versiones.
-</P>
+
+<ul>
+    <li><strong>Jefe de proyecto:</strong> planificación, seguimiento, control y cierre. Máximo responsable.</li>
+
+    <li><strong>Expertos del dominio:</strong> conocen la realidad del negocio o problema.</li>
+
+    <li><strong>Analista:</strong> comunica con los expertos del dominio y define los requisitos funcionales.</li>
+
+    <li><strong>Arquitecto:</strong> define la arquitectura global del sistema (cómo se divide en componentes).</li>
+
+    <li><strong>Diseñador (o analista técnico/orgánico):</strong> diseña en detalle los componentes.</li>
+
+    <li><strong>Programador:</strong> escribe el código fuente.</li>
+
+    <li><strong>Probador (tester):</strong> ejecuta pruebas unitarias, de integración y de sistema. Garantiza la calidad.</li>
+
+    <li><strong>Encargado de la implantación:</strong> empaquetado, instalación, gestión de configuración y versiones.</li>
+</ul>
 <h2>16. Fases detalladas del ciclo de vida (modelo clásico)</h2>
-<p>
-•	Análisis: determinar QUÉ debe hacer el sistema.
-•	Diseño: decidir CÓMO se va a hacer (componentes, bases de datos, etc.).
-•	Implementación / Programación
-•	Pruebas:
-    o	Unitarias (módulos aislados)
-    o	Integración
-    o	Sistema completo
-    o	Validación con requisitos del cliente
-•	Explotación: instalación y puesta en marcha en el cliente.
-•	Mantenimiento: corrección, adaptación, perfeccionamiento y prevención tras la entrega.
-</p>
+
+<ul>
+    <li><strong>Análisis:</strong> determinar QUÉ debe hacer el sistema.</li>
+
+    <li><strong>Diseño:</strong> decidir CÓMO se va a hacer 
+        (componentes, bases de datos, etc.).
+    </li>
+
+    <li><strong>Implementación / Programación</strong></li>
+
+    <li><strong>Pruebas:</strong>
+        <ul>
+            <li>Unitarias (módulos aislados)</li>
+            <li>Integración</li>
+            <li>Sistema completo</li>
+            <li>Validación con requisitos del cliente</li>
+        </ul>
+    </li>
+
+    <li><strong>Explotación:</strong> instalación y puesta en marcha en el cliente.</li>
+
+    <li><strong>Mantenimiento:</strong> corrección, adaptación, perfeccionamiento y 
+        prevención tras la entrega.
+    </li>
+</ul>
 </body>
 </html>

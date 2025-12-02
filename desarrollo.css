@@ -282,6 +282,7 @@ header {
     padding: 20px;
     text-align: center;
 }
+<<<<<<< HEAD
 #apartado7 .proceso-codigo {
   max-width: 700px;
   margin: auto;
@@ -314,4 +315,56 @@ header {
 
 
 
+=======
+.razon-container {
+    width: 80%;
+    margin: 0 auto;        
+    text-align: center;    
+}
+>>>>>>> 3f447e01c964a3938c1979434517e6b3f76eeda3
 
+
+.item {
+    background-color: #2a0b1f;
+    color: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #a45a8d;
+}
+.clasificacion-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;   
+    color: #fff;
+}
+
+.lista-puntos {
+    list-style-type: disc;  
+    padding-left: 40px;      
+}
+
+.lista-puntos li {
+    margin-bottom: 10px;      
+    line-height: 1.5;         
+}
+.lista-numerada {
+    padding-left: 40px;
+    color: #fff;
+}
+
+.lista-numerada li {
+    margin-bottom: 15px;   
+    line-height: 1.5;      
+}        
+.lista-numerada,
+.lista-puntos {
+    padding-left: 40px;
+    color: #fff;
+}
+
+.lista-numerada li,
+.lista-puntos li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
