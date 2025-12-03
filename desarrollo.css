@@ -233,6 +233,33 @@ code {
     line-height: 1.7;
     text-align: center;
 }
+.modelo-cascada {
+  max-width: 700px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+.bloque {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.bloque h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+  color: #ffd35c;
+}
+
+.bloque p {
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+
 .nav-link {
     display: inline-block;
     margin: 10px 15px;
@@ -254,4 +281,90 @@ code {
 header {
     padding: 20px;
     text-align: center;
+}
+<<<<<<< HEAD
+#apartado7 .proceso-codigo {
+  max-width: 700px;
+  margin: auto;
+  padding: 15px;
+  background-color: rgba(0, 100, 200, 0.15); /* azul suave */
+  border-radius: 8px;
+}
+
+#apartado7 .proceso-codigo h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #7fcaff;
+}
+
+#apartado7 .paso {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#apartado7 .proceso-codigo h3 {
+  color: #aee1ff;
+  margin-bottom: 5px;
+}
+
+#apartado7 .proceso-codigo p {
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+
+
+=======
+.razon-container {
+    width: 80%;
+    margin: 0 auto;        
+    text-align: center;    
+}
+>>>>>>> 3f447e01c964a3938c1979434517e6b3f76eeda3
+
+
+.item {
+    background-color: #2a0b1f;
+    color: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #a45a8d;
+}
+.clasificacion-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;   
+    color: #fff;
+}
+
+.lista-puntos {
+    list-style-type: disc;  
+    padding-left: 40px;      
+}
+
+.lista-puntos li {
+    margin-bottom: 10px;      
+    line-height: 1.5;         
+}
+.lista-numerada {
+    padding-left: 40px;
+    color: #fff;
+}
+
+.lista-numerada li {
+    margin-bottom: 15px;   
+    line-height: 1.5;      
+}        
+.lista-numerada,
+.lista-puntos {
+    padding-left: 40px;
+    color: #fff;
+}
+
+.lista-numerada li,
+.lista-puntos li {
+    margin-bottom: 12px;
+    line-height: 1.5;
 }
